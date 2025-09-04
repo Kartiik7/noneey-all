@@ -1,0 +1,1121 @@
+[
+    {
+        "id": 1,
+        "title": "Shahi Veg Biryani Recipe – Royal Vegetarian Biryani with Dum Cooking",
+        "description": "Learn to make Shahi Veg Biryani at home — a royal, aromatic layered rice dish cooked with ghee, spices, nuts, and vegetables. Perfect for special occasions. Includes step-by-step photos and video tutorial.",
+        "image": "/frontend/img/12.png",
+        "quote": "A royal vegetarian biryani that’s rich, fragrant, and fit for kings — in your kitchen today!",
+        "quickInfo": {
+            "prepTime": "30 min",
+            "cookTime": "50 min",
+            "totalTime": "1 hr 20 min",
+            "servings": "6",
+            "difficulty": "Medium"
+        },
+        "introduction": [
+            "Shahi Veg Biryani is a royal Indian delicacy that combines aromatic basmati rice with a rich vegetable and nut mixture, slow-cooked using the traditional dum pukht method.",
+            "‘Shahi’ means ‘royal,’ and this dish truly lives up to its name with layers of ghee, whole spices, saffron, and creamy textures. Perfect for weddings, festivals, or any special occasion."
+        ],
+        "history": [
+            "Though they have Persian origin, biryani is famous throughout India, with each state having its variety of biryani. And for this, we need to be thankful to the Mughals as they bought this exotic dish to India.",
+            "Furthermore, the dish was further developed in Mughal kitchens. As a result, it became more and more popular in India.",
+            "It gets the name biriyani from the Persian words ‘Birian‘, which means fried before cooking, and ‘Brinj,’ which means rice in Persia.",
+            "In India, each house has its own style of cooking biriyani since biryani is a dish that can make us feel comforted and indulgent at the same time."
+        ],
+        "inner1": [
+            "Rich, aromatic, and full of flavor.",
+            "Vegetarian, yet indulgent.",
+            "Perfect for festive gatherings.",
+            "Step-by-step guide with images and video.",
+            "Can be prepped in advance."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/vp-eztySVyI?si=L5eDJGyohbt_rmPy"
+        ],
+        "ingredients": [
+            {
+                "category": "For Rice",
+                "items": [
+                    "2 cups basmati rice",
+                    "4 cups water",
+                    "1 tsp salt",
+                    "2 green cardamoms",
+                    "3 cloves",
+                    "1 small cinnamon stick",
+                    "1 bay leaf"
+                ]
+            },
+            {
+                "category": "For Vegetable Mala",
+                "items": [
+                    "3 tbsp ghee",
+                    "1 cup onions, thinly sliced",
+                    "1 cup mixed vegetables (carrot, beans, peas, cauliflower)",
+                    "1 cup tomatoes, chopped",
+                    "1 tbsp ginger-garlic paste",
+                    "2 green chilies, slit",
+                    "½ cup yogurt (curd)",
+                    "¼ cup fresh cream",
+                    "½ tsp turmeric powder",
+                    "1 tsp red chili powder",
+                    "1 tsp coriander powder",
+                    "Salt to taste",
+                    "Fresh coriander leaves – a handful, chopped",
+                    "Fresh mint leaves – a handful, chopped"
+                ]
+            },
+            {
+                "category": "For Garnish & Flavor",
+                "items": [
+                    "2 tbsp fried onions (birista)",
+                    "2 tbsp roasted cashews",
+                    "1 tbsp raisins",
+                    "1 tsp saffron strands soaked in 2 tbsp warm milk"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare the Rice",
+                "items": [
+                    "Wash and soak the basmati rice in water for 20–30 minutes.",
+                    "In a large pot, boil 4 cups water with salt, cardamoms, cloves, cinnamon, and bay leaf.",
+                    "Add soaked rice and cook until 70% done (grains should still be firm).",
+                    "Drain the rice and set aside."
+                ]
+            },
+            {
+                "steps": "Step 2 – Prepare the Vegetable Masala",
+                "items": [
+                    "Heat ghee in a heavy-bottom pan.",
+                    "Add sliced onions and sauté until golden brown.",
+                    "Stir in ginger-garlic paste and green chilies; cook for a minute.",
+                    "Add chopped tomatoes and cook until soft.",
+                    "Mix in turmeric, chili powder, coriander powder, and salt.",
+                    "Add mixed vegetables and cook for 3–4 minutes.",
+                    "Lower the heat, add yogurt and cream; cook until the gravy thickens.",
+                    "Stir in chopped coriander and mint leaves."
+                ]
+            },
+            {
+                "steps": "Step 3 – Layer the Biryani",
+                "items": [
+                    "In a heavy-bottom pot or handi, spread a layer of vegetable masala.",
+                    "Add a layer of rice over it.",
+                    "Sprinkle fried onions, roasted cashews, raisins, and saffron milk.",
+                    "Repeat the layers until all rice and masala are used, ending with a rice layer topped with garnish."
+                ]
+            },
+            {
+                "steps": "Step 4 – Dum Cooking",
+                "items": [
+                    "Seal the pot with aluminum foil or wheat dough.",
+                    "Cook on low heat for 20–25 minutes (dum method) so the flavors infuse.",
+                    "Switch off the heat and let it rest for 5 minutes before opening."
+                ]
+            },
+            {
+                "steps": "Step 5 – Serve",
+                "items": [
+                    "Gently fluff the biryani with a fork to avoid breaking the rice grains.",
+                    "Serve hot with raita, papad, and salad."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Use aged basmati rice for the best aroma and texture.",
+            "Fry onions slowly for perfect crispiness and sweetness.",
+            "Do not overcook vegetables—they should retain some bite after dum cooking.",
+            "For a vegan version, replace ghee with oil and cream with coconut milk."
+        ],
+        "servingSuggestions": [
+            "Serve hot with raita (boondi or cucumber), papad, and salad.",
+            "Pairs beautifully with roasted papad and pickle."
+        ],
+        "storageAndHeating": [
+            "Store in an airtight container in the fridge for up to 2 days.",
+            "Reheat by steaming or microwaving with a sprinkle of water."
+        ],
+        "nutritionalInfo": {
+            "Calories": "420 kcal",
+            "Protein": "8g",
+            "Carbs": "65g",
+            "Fat": "15g",
+            "Fiber": "5g",
+            "Note": "(Values approximate; vary based on ingredients.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I use brown rice?",
+                "answer": "Yes, but cooking time will increase."
+            },
+            {
+                "question": "Can I skip saffron?",
+                "answer": "You can use turmeric for color, but flavor will differ."
+            },
+            {
+                "question": "Can I make it without dum cooking?",
+                "answer": "Yes, layer in a slow cooker for similar results."
+            }
+        ],
+        "closingMessage": "Bring the taste of royal kitchens to your home — try this Shahi Veg Biryani today and share your creation with us!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "",
+            "link": "newpage.html?id=2"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Paneer Butter Masala – Creamy Tomato-Based Curry",
+        "description": "A rich and creamy North Indian curry made with paneer cubes simmered in a buttery, spiced tomato sauce. Perfect with naan or jeera rice.",
+        "image": "/frontend/img/22.png",
+        "quote": "Restaurant-style paneer curry at home — creamy, buttery, and unforgettable!",
+        "quickInfo": {
+            "prepTime": "20 min",
+            "cookTime": "30 min",
+            "totalTime": "50 min",
+            "servings": "4",
+            "difficulty": "Easy"
+        },
+        "introduction": [
+            "Paneer Butter Masala is one of the most popular paneer dishes in Indian restaurants, known for its rich, buttery gravy.",
+            "It features soft paneer cubes in a velvety, tomato-cashew-based sauce, lightly spiced and finished with cream."
+        ],
+        "history": [
+            "Paneer Butter Masala, also called Butter Paneer, traces its origin to North India, specifically Punjabi cuisine.",
+            "It is believed to have evolved from the famous dish 'Butter Chicken' when vegetarians sought an alternative.",
+            "Since then, it has become a staple in Indian restaurants across the world."
+        ],
+        "inner1": [
+            "Creamy and buttery gravy.",
+            "Mildly spiced yet flavorful.",
+            "Perfect with naan or jeera rice.",
+            "Beginner-friendly recipe.",
+            "Restaurant-style taste at home."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/oYZ--rdHL6I?si=zbel4kMPA2A29F2E"
+        ],
+        "ingredients": [
+            {
+                "category": "For Curry Base",
+                "items": [
+                    "2 tbsp butter",
+                    "1 tbsp oil",
+                    "2 medium onions, finely chopped",
+                    "3 medium tomatoes, pureed",
+                    "10-12 cashews, soaked",
+                    "1 tbsp ginger-garlic paste",
+                    "1-2 green chilies, slit"
+                ]
+            },
+            {
+                "category": "Spices & Flavor",
+                "items": [
+                    "1 tsp red chili powder",
+                    "½ tsp turmeric powder",
+                    "1 tsp garam masala",
+                    "1 tsp coriander powder",
+                    "Salt to taste",
+                    "1 tsp kasuri methi (dried fenugreek leaves)"
+                ]
+            },
+            {
+                "category": "Final Touch",
+                "items": [
+                    "200g paneer cubes",
+                    "½ cup fresh cream",
+                    "1 tbsp butter (for finishing)",
+                    "Fresh coriander leaves, chopped"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare the Base",
+                "items": [
+                    "Heat oil and 1 tbsp butter in a pan.",
+                    "Sauté onions until golden brown.",
+                    "Add ginger-garlic paste and green chilies, cook for 1 minute.",
+                    "Add tomato puree and cook until oil separates."
+                ]
+            },
+            {
+                "steps": "Step 2 – Cashew Paste",
+                "items": [
+                    "Grind soaked cashews with little water into a smooth paste.",
+                    "Add this paste to the curry base and mix well."
+                ]
+            },
+            {
+                "steps": "Step 3 – Spice it Up",
+                "items": [
+                    "Add red chili powder, turmeric, coriander powder, and salt.",
+                    "Cook for 3–4 minutes until flavors blend."
+                ]
+            },
+            {
+                "steps": "Step 4 – Add Paneer",
+                "items": [
+                    "Gently add paneer cubes to the gravy.",
+                    "Sprinkle kasuri methi for flavor.",
+                    "Pour in cream and simmer for 5 minutes."
+                ]
+            },
+            {
+                "steps": "Step 5 – Final Touch",
+                "items": [
+                    "Stir in remaining butter for richness.",
+                    "Garnish with coriander leaves.",
+                    "Serve hot with naan, paratha, or jeera rice."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Soak paneer cubes in warm water for 10 minutes before adding to keep them soft.",
+            "Adjust cream quantity for richness according to preference.",
+            "Add a pinch of sugar to balance tanginess of tomatoes."
+        ],
+        "servingSuggestions": [
+            "Best served with butter naan or garlic naan.",
+            "Pairs beautifully with jeera rice or pulao."
+        ],
+        "storageAndHeating": [
+            "Store in the fridge for up to 2 days in an airtight container.",
+            "Reheat gently on stovetop with a splash of milk or cream to retain texture."
+        ],
+        "nutritionalInfo": {
+            "Calories": "380 kcal",
+            "Protein": "12g",
+            "Carbs": "20g",
+            "Fat": "28g",
+            "Fiber": "3g",
+            "Note": "(Values approximate; vary based on ingredients.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I make it without cream?",
+                "answer": "Yes, you can use milk or cashew cream instead for a lighter version."
+            },
+            {
+                "question": "How do I prevent paneer from becoming rubbery?",
+                "answer": "Do not overcook paneer; add it at the end and simmer lightly."
+            },
+            {
+                "question": "Can I use store-bought tomato puree?",
+                "answer": "Yes, but fresh tomato puree gives better flavor and color."
+            }
+        ],
+        "closingMessage": "Bring the flavors of your favorite Indian restaurant home — try this Paneer Butter Masala today and enjoy its creamy richness!",
+        "nextSuggestion": {
+            "link": ""
+        }
+    },
+    {
+        "id": 3,
+        "title": "Chole Masala – Spicy Punjabi Chickpea Curry",
+        "description": "A classic Punjabi dish of chickpeas cooked in a spicy, tangy tomato-onion gravy. Perfect with bhature, puri, or steamed rice.",
+        "image": "/frontend/img/32.png",
+        "quote": "Authentic Punjabi chole — spicy, tangy, and packed with flavors in every bite!",
+        "quickInfo": {
+            "prepTime": "15 min",
+            "cookTime": "40 min",
+            "totalTime": "55 min",
+            "servings": "4",
+            "difficulty": "Medium"
+        },
+        "introduction": [
+            "Chole Masala is a beloved dish from Punjab, featuring tender chickpeas simmered in a rich, spiced tomato-onion gravy.",
+            "It is a favorite street food as well as a household staple, often served during breakfast, lunch, or dinner."
+        ],
+        "history": [
+            "Originating in North India, Chole has become synonymous with Punjabi cuisine.",
+            "Traditionally served with deep-fried bread called bhature, it is a festive and hearty dish.",
+            "The dish gained popularity across India and internationally due to its bold flavors and protein-rich ingredients."
+        ],
+        "inner1": [
+            "Protein-packed and nutritious.",
+            "Tangy, spicy, and full of aroma.",
+            "Pairs beautifully with bhature, puri, or rice.",
+            "Traditional North Indian flavors.",
+            "Beginner-friendly with simple ingredients."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/uKUvtyjw8R0?si=CXg_rg5mA8t7BCbx"
+        ],
+        "ingredients": [
+            {
+                "category": "For Chickpeas",
+                "items": [
+                    "1 cup dried chickpeas (or 2 cups canned)",
+                    "4 cups water",
+                    "1 tsp salt",
+                    "1 tsp baking soda (optional, for faster cooking)"
+                ]
+            },
+            {
+                "category": "For Gravy",
+                "items": [
+                    "2 tbsp oil",
+                    "1 tsp cumin seeds",
+                    "2 medium onions, finely chopped",
+                    "2 medium tomatoes, pureed",
+                    "1 tbsp ginger-garlic paste",
+                    "2 green chilies, slit",
+                    "1 tsp turmeric powder",
+                    "1 tsp red chili powder",
+                    "1 tsp coriander powder",
+                    "1 tsp garam masala",
+                    "1 tsp amchur (dry mango powder)",
+                    "Salt to taste",
+                    "Fresh coriander leaves for garnish"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Cook Chickpeas",
+                "items": [
+                    "Soak dried chickpeas overnight or for 8 hours.",
+                    "Boil soaked chickpeas with water, salt, and baking soda until soft (20–25 minutes).",
+                    "Drain and set aside."
+                ]
+            },
+            {
+                "steps": "Step 2 – Prepare Gravy",
+                "items": [
+                    "Heat oil in a pan, add cumin seeds and let them splutter.",
+                    "Sauté onions until golden brown.",
+                    "Add ginger-garlic paste and green chilies; cook for 1–2 minutes.",
+                    "Add tomato puree and cook until oil separates."
+                ]
+            },
+            {
+                "steps": "Step 3 – Spice it Up",
+                "items": [
+                    "Add turmeric, red chili powder, coriander powder, and salt.",
+                    "Cook for 3–4 minutes until spices blend with the gravy."
+                ]
+            },
+            {
+                "steps": "Step 4 – Combine Chickpeas",
+                "items": [
+                    "Add cooked chickpeas to the gravy.",
+                    "Add ½ cup water if needed and simmer for 10 minutes to blend flavors.",
+                    "Sprinkle garam masala and amchur powder; mix gently."
+                ]
+            },
+            {
+                "steps": "Step 5 – Final Touch",
+                "items": [
+                    "Garnish with chopped coriander leaves.",
+                    "Serve hot with bhature, puri, or steamed rice."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Use freshly ground spices for more aroma.",
+            "Adjust green chilies according to your spice tolerance.",
+            "Soaking chickpeas overnight improves texture and reduces cooking time."
+        ],
+        "servingSuggestions": [
+            "Serve with hot bhature or puri for a classic meal.",
+            "Can also be served with steamed basmati rice or jeera rice."
+        ],
+        "storageAndHeating": [
+            "Store in an airtight container in the fridge for up to 2 days.",
+            "Reheat on stovetop with a splash of water to maintain consistency."
+        ],
+        "nutritionalInfo": {
+            "Calories": "250 kcal",
+            "Protein": "12g",
+            "Carbs": "35g",
+            "Fat": "7g",
+            "Fiber": "10g",
+            "Note": "(Values approximate; vary based on ingredients.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I use canned chickpeas?",
+                "answer": "Yes, reduce cooking time since canned chickpeas are already soft."
+            },
+            {
+                "question": "How do I make it spicier?",
+                "answer": "Add more green chilies or red chili powder according to taste."
+            },
+            {
+                "question": "Can I freeze Chole Masala?",
+                "answer": "Yes, store in airtight containers and thaw/reheat as needed."
+            }
+        ],
+        "closingMessage": "Enjoy the authentic flavors of Punjab with this Chole Masala — a hearty, spicy dish perfect for every occasion!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "",
+            "link": "/frontend/views/newpage.html?id=4"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Poha – Flattened Rice Breakfast from Maharashtra",
+        "description": "A quick and flavorful Maharashtrian breakfast made with flattened rice, peanuts, and mild spices. Perfect for a light, energizing meal.",
+        "image": "/frontend/img/42.png",
+        "quote": "Start your day with this light, tangy, and aromatic Poha — a true taste of Maharashtra!",
+        "quickInfo": {
+            "prepTime": "10 min",
+            "cookTime": "10 min",
+            "totalTime": "20 min",
+            "servings": "2–3",
+            "difficulty": "Easy"
+        },
+        "introduction": [
+            "Poha is a staple breakfast from Maharashtra, known for its simplicity, lightness, and quick preparation.",
+            "Flattened rice is tempered with mustard seeds, curry leaves, turmeric, peanuts, and green chilies to create a nutritious and flavorful dish."
+        ],
+        "history": [
+            "Poha originated in Western India and became widely popular in Maharashtra as a breakfast staple.",
+            "It is often served with fresh coriander, lemon juice, and grated coconut for an added burst of flavor.",
+            "Traditionally, Poha is enjoyed with a cup of chai or tea in the morning."
+        ],
+        "inner1": [
+            "Light, healthy, and filling.",
+            "Easy to prepare in under 20 minutes.",
+            "Tangy and mildly spiced for breakfast.",
+            "Suitable for all ages.",
+            "Pairs perfectly with tea or coffee."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/LAcFkm5Soq8?si=pMS85QYgVJ8ETQhM"
+        ],
+        "ingredients": [
+            {
+                "category": "Main Ingredients",
+                "items": [
+                    "2 cups poha (flattened rice)",
+                    "1 medium onion, finely chopped",
+                    "1–2 green chilies, chopped",
+                    "10–12 curry leaves",
+                    "2 tbsp peanuts",
+                    "1/2 tsp mustard seeds",
+                    "1/4 tsp turmeric powder",
+                    "2 tbsp oil",
+                    "Salt to taste",
+                    "Juice of 1 lemon",
+                    "Fresh coriander leaves for garnish",
+                    "Grated coconut for garnish (optional)"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare Poha",
+                "items": [
+                    "Rinse poha in a colander under running water until softened but not mushy.",
+                    "Drain and keep aside."
+                ]
+            },
+            {
+                "steps": "Step 2 – Temper Spices",
+                "items": [
+                    "Heat oil in a pan, add mustard seeds and let them splutter.",
+                    "Add peanuts and roast for a minute.",
+                    "Add chopped onions, green chilies, and curry leaves; sauté until onions turn translucent."
+                ]
+            },
+            {
+                "steps": "Step 3 – Cook Poha",
+                "items": [
+                    "Add turmeric powder and salt to the pan, mix well.",
+                    "Add the drained poha and toss gently to combine with the spices.",
+                    "Cook on low heat for 2–3 minutes."
+                ]
+            },
+            {
+                "steps": "Step 4 – Final Touch",
+                "items": [
+                    "Turn off the heat and squeeze lemon juice over the poha.",
+                    "Garnish with fresh coriander and grated coconut if desired.",
+                    "Serve immediately with a cup of chai or tea."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Do not over-soak poha, or it will become mushy.",
+            "Adjust green chilies according to spice preference.",
+            "You can add grated carrots or peas for extra nutrition and color."
+        ],
+        "servingSuggestions": [
+            "Serve hot with chai or coffee.",
+            "Can be paired with farsan (savory snack) for a more filling breakfast."
+        ],
+        "storageAndHeating": [
+            "Best eaten fresh; can be stored in the fridge for up to 1 day.",
+            "Reheat gently on stovetop before serving."
+        ],
+        "nutritionalInfo": {
+            "Calories": "220 kcal",
+            "Protein": "5g",
+            "Carbs": "40g",
+            "Fat": "7g",
+            "Fiber": "3g",
+            "Note": "(Values approximate; vary based on ingredients.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I use thick poha?",
+                "answer": "Yes, just rinse lightly and adjust cooking time to soften it."
+            },
+            {
+                "question": "Can I make it vegan?",
+                "answer": "Yes, this recipe is already vegan-friendly as it uses oil instead of ghee."
+            },
+            {
+                "question": "Can I add vegetables?",
+                "answer": "Yes, grated carrots, peas, or bell peppers can be added for extra nutrition."
+            }
+        ],
+        "closingMessage": "Enjoy a light, flavorful, and traditional Maharashtrian breakfast with this Poha recipe — perfect to kickstart your day!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "",
+            "link": "/frontend/views/newpage.html?id=5"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Kerala Avial – Mixed Vegetable Coconut Curry",
+        "description": "A traditional Kerala dish made with a mix of vegetables, coconut, and yogurt, flavored with curry leaves and coconut oil. Perfect as a side dish with rice.",
+        "image": "/frontend/img/52.png",
+        "quote": "Experience the authentic taste of Kerala with this wholesome, aromatic Avial — a true vegetable delight!",
+        "quickInfo": {
+            "prepTime": "15 min",
+            "cookTime": "25 min",
+            "totalTime": "40 min",
+            "servings": "4",
+            "difficulty": "Medium"
+        },
+        "introduction": [
+            "Avial is a signature dish from Kerala, combining a variety of vegetables with a coconut-yogurt gravy.",
+            "It is traditionally flavored with curry leaves, coconut oil, and green chilies, creating a mildly spiced and aromatic dish."
+        ],
+        "history": [
+            "Avial is an essential dish in Kerala Sadya (traditional feast), dating back centuries in South Indian cuisine.",
+            "It showcases the use of seasonal vegetables, coconut, and subtle spices, reflecting Kerala's culinary traditions.",
+            "The dish is considered a wholesome vegetarian preparation and is often served with steamed rice."
+        ],
+        "inner1": [
+            "Rich in vegetables and nutrients.",
+            "Mildly spiced and aromatic.",
+            "Perfect accompaniment to rice.",
+            "Traditional Kerala recipe.",
+            "Healthy and easy to prepare."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/tXA__uEn8KU?si=EROS6oBP9bKi2_vG"
+        ],
+        "ingredients": [
+            {
+                "category": "Vegetables",
+                "items": [
+                    "1 cup carrot, cut into thin strips",
+                    "1 cup beans, cut into 2-inch pieces",
+                    "1 cup drumstick (moringa), cut into 2-inch pieces",
+                    "1 cup raw banana, sliced",
+                    "1 cup ash gourd or pumpkin, cut into cubes",
+                    "1 cup snake gourd (optional)"
+                ]
+            },
+            {
+                "category": "For Coconut Paste",
+                "items": [
+                    "1 cup grated coconut",
+                    "2–3 green chilies",
+                    "1/2 tsp cumin seeds",
+                    "1/4 cup water (for grinding)"
+                ]
+            },
+            {
+                "category": "Other Ingredients",
+                "items": [
+                    "2 tbsp coconut oil",
+                    "10–12 curry leaves",
+                    "1/2 cup yogurt (curd)",
+                    "Salt to taste"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Cook Vegetables",
+                "items": [
+                    "Wash and cut all vegetables into uniform pieces.",
+                    "In a pan, add vegetables with a little water and salt; cook until tender but not mushy."
+                ]
+            },
+            {
+                "steps": "Step 2 – Prepare Coconut Paste",
+                "items": [
+                    "Grind grated coconut, green chilies, and cumin seeds with water to a smooth paste.",
+                    "Add the paste to the cooked vegetables and mix gently."
+                ]
+            },
+            {
+                "steps": "Step 3 – Add Yogurt and Curry Leaves",
+                "items": [
+                    "Whisk yogurt until smooth and add to the vegetables.",
+                    "Cook on low heat for 2–3 minutes without boiling to prevent curdling.",
+                    "Add curry leaves and mix gently."
+                ]
+            },
+            {
+                "steps": "Step 4 – Finish with Coconut Oil",
+                "items": [
+                    "Turn off the heat and drizzle coconut oil on top.",
+                    "Serve immediately with steamed rice."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Do not overcook the vegetables to maintain texture.",
+            "Use fresh coconut for the best flavor.",
+            "Add yogurt at low heat to prevent curdling.",
+            "Traditionally, Avial is mildly spiced; adjust chili according to taste."
+        ],
+        "servingSuggestions": [
+            "Serve hot with steamed rice.",
+            "Pairs well with sambar, rasam, or a simple dal."
+        ],
+        "storageAndHeating": [
+            "Best eaten fresh; can be stored in the fridge for 1 day.",
+            "Reheat gently on low heat before serving."
+        ],
+        "nutritionalInfo": {
+            "Calories": "180 kcal",
+            "Protein": "5g",
+            "Carbs": "20g",
+            "Fat": "9g",
+            "Fiber": "6g",
+            "Note": "(Values approximate; vary based on vegetables used.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I use frozen vegetables?",
+                "answer": "Yes, but fresh vegetables give better texture and flavor."
+            },
+            {
+                "question": "Can I make it vegan?",
+                "answer": "Yes, replace yogurt with coconut milk or skip it entirely."
+            },
+            {
+                "question": "Can I store it overnight?",
+                "answer": "It’s best eaten fresh; overnight storage may reduce freshness and flavor."
+            }
+        ],
+        "closingMessage": "Bring the authentic flavors of Kerala to your table with this Avial recipe — wholesome, aromatic, and delicious!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "",
+            "link": "newpage.html?id=6"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Aloo Posto – Bengali Potato with Poppy Seeds",
+        "description": "A traditional Bengali vegetarian dish where potatoes are cooked with a paste of poppy seeds and green chilies. A simple yet flavorful dish best paired with steamed rice.",
+        "image": "/frontend/img/62.png",
+        "quote": "Experience the rustic simplicity of Bengal with this creamy and aromatic Aloo Posto!",
+        "quickInfo": {
+            "prepTime": "20 min",
+            "cookTime": "25 min",
+            "totalTime": "45 min",
+            "servings": "4",
+            "difficulty": "Easy"
+        },
+        "introduction": [
+            "Aloo Posto is a beloved Bengali vegetarian dish featuring potatoes cooked in a poppy seed (posto) and chili paste.",
+            "It is an everyday comfort food in Bengali households and is often enjoyed with plain steamed rice."
+        ],
+        "history": [
+            "Aloo Posto is a staple in Bengali cuisine, rooted in the agricultural regions of West Bengal where poppy seeds are widely used.",
+            "The dish is a perfect example of turning minimal ingredients into a flavorful delicacy.",
+            "Its light, nutty flavor combined with potatoes has made it a timeless classic in Bengali kitchens."
+        ],
+        "inner1": [
+            "Simple, rustic Bengali dish.",
+            "Mildly spiced with green chilies.",
+            "Nutty and creamy texture from poppy seeds.",
+            "Pairs perfectly with steamed rice.",
+            "Light yet flavorful everyday curry."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/LpECwCqzOf4"
+        ],
+        "ingredients": [
+            {
+                "category": "Main Ingredients",
+                "items": [
+                    "4 medium potatoes, peeled and cubed",
+                    "3 tbsp poppy seeds (posto)",
+                    "2 green chilies",
+                    "1 tsp mustard oil",
+                    "1/2 tsp nigella seeds (kalonji)",
+                    "1/2 tsp turmeric powder",
+                    "Salt to taste"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare Posto Paste",
+                "items": [
+                    "Soak poppy seeds in warm water for 30 minutes.",
+                    "Grind soaked poppy seeds with green chilies into a smooth paste."
+                ]
+            },
+            {
+                "steps": "Step 2 – Cook Potatoes",
+                "items": [
+                    "Heat mustard oil in a pan and add nigella seeds until they splutter.",
+                    "Add potato cubes, turmeric, and salt. Sauté for 5–6 minutes."
+                ]
+            },
+            {
+                "steps": "Step 3 – Add Posto Paste",
+                "items": [
+                    "Stir in the poppy seed paste and mix well.",
+                    "Add a little water, cover, and cook until the potatoes are tender and coated with the posto paste."
+                ]
+            },
+            {
+                "steps": "Step 4 – Serve",
+                "items": [
+                    "Turn off the heat once potatoes are cooked.",
+                    "Serve hot with steamed rice."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Use fresh mustard oil for authentic Bengali flavor.",
+            "Do not overcook the posto paste, as it may lose its aroma.",
+            "Adjust green chilies based on your spice preference."
+        ],
+        "servingSuggestions": [
+            "Best served with steamed white rice.",
+            "Can be paired with dal (lentils) for a wholesome Bengali meal."
+        ],
+        "storageAndHeating": [
+            "Store leftovers in an airtight container in the refrigerator for up to 1 day.",
+            "Reheat on a stovetop with a splash of water to retain moisture."
+        ],
+        "nutritionalInfo": {
+            "Calories": "280 kcal",
+            "Protein": "6g",
+            "Carbs": "32g",
+            "Fat": "14g",
+            "Fiber": "5g",
+            "Note": "(Values are approximate and depend on ingredients used.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I skip mustard oil?",
+                "answer": "Yes, but mustard oil gives the authentic Bengali taste that makes Aloo Posto special."
+            },
+            {
+                "question": "Can I make the posto paste in advance?",
+                "answer": "Yes, but it's best to make it fresh for maximum flavor."
+            },
+            {
+                "question": "Is Aloo Posto spicy?",
+                "answer": "It is usually mildly spiced, but you can add more green chilies if you prefer it spicier."
+            }
+        ],
+        "closingMessage": "Relish the comforting and earthy flavors of Aloo Posto – a Bengali classic that turns simplicity into magic!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "",
+            "link": "newpage.html?id=7"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Dal Baati Churma – Traditional Rajasthani Meal",
+        "description": "A classic Rajasthani dish consisting of spiced lentils (dal), baked wheat balls (baati), and sweet crushed wheat (churma). A hearty and festive combination.",
+        "image": "/frontend/img/72.png",
+        "quote": "Experience the royal flavors of Rajasthan with this wholesome, rustic Dal Baati Churma!",
+        "quickInfo": {
+            "prepTime": "30 min",
+            "cookTime": "50 min",
+            "totalTime": "1 hr 20 min",
+            "servings": "4",
+            "difficulty": "Medium"
+        },
+        "introduction": [
+            "Dal Baati Churma is a quintessential Rajasthani meal, famous for its rustic flavors and satisfying combination of savory and sweet.",
+            "Baati are baked wheat balls, dal is spiced lentils, and churma is sweetened crushed wheat — together forming a complete and festive meal."
+        ],
+        "history": [
+            "Dal Baati Churma originated in Rajasthan centuries ago, initially as a sustenance meal for warriors.",
+            "The dish became popular across the region for festivals and celebrations due to its hearty and fulfilling nature.",
+            "Each family has its own style of preparing baati, dal, and churma, adding a unique touch to this iconic dish."
+        ],
+        "inner1": [
+            "A complete meal with protein, carbs, and sweetness.",
+            "Rustic and hearty flavors.",
+            "Perfect for festive occasions.",
+            "Traditional Rajasthani comfort food.",
+            "Pairs well with ghee and pickles."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/mZ4xTelTAGk?si=IEbApu82cqPI6QFy"
+        ],
+        "ingredients": [
+            {
+                "category": "For Dal",
+                "items": [
+                    "1 cup split yellow moong dal",
+                    "1/2 tsp turmeric powder",
+                    "1 tsp cumin seeds",
+                    "1/2 tsp red chili powder",
+                    "2 tbsp ghee",
+                    "Salt to taste",
+                    "4 cups water"
+                ]
+            },
+            {
+                "category": "For Baati",
+                "items": [
+                    "2 cups whole wheat flour",
+                    "1/2 cup semolina (optional, for crispiness)",
+                    "1/4 cup ghee",
+                    "1/4 tsp salt",
+                    "Water as needed to knead dough"
+                ]
+            },
+            {
+                "category": "For Churma",
+                "items": [
+                    "1 cup whole wheat flour",
+                    "2–3 tbsp ghee",
+                    "3–4 tbsp powdered sugar",
+                    "1/4 tsp cardamom powder",
+                    "Nuts for garnish (optional)"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare Dal",
+                "items": [
+                    "Wash and soak dal for 15–20 minutes.",
+                    "Cook dal with water, turmeric, and salt until soft.",
+                    "In a pan, heat ghee, add cumin seeds, red chili powder, and pour over cooked dal (tadka)."
+                ]
+            },
+            {
+                "steps": "Step 2 – Prepare Baati",
+                "items": [
+                    "Mix wheat flour, semolina, ghee, and salt.",
+                    "Knead with water into firm dough.",
+                    "Shape into small balls and bake at 180°C (350°F) for 25–30 minutes until golden, brushing with ghee occasionally."
+                ]
+            },
+            {
+                "steps": "Step 3 – Prepare Churma",
+                "items": [
+                    "Roast wheat flour in ghee until light golden and aromatic.",
+                    "Cool slightly and crush into coarse crumbs.",
+                    "Add powdered sugar, cardamom, and nuts; mix well."
+                ]
+            },
+            {
+                "steps": "Step 4 – Serve",
+                "items": [
+                    "Serve hot dal with baked baati, ghee, and a side of churma.",
+                    "Crush baati slightly and pour dal over it for authentic experience."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Bake baati evenly and brush with ghee for a crisp exterior and soft interior.",
+            "Prepare churma fresh for the best flavor.",
+            "Dal can be tempered with garlic or dried red chilies for extra aroma."
+        ],
+        "servingSuggestions": [
+            "Serve with extra ghee for authentic taste.",
+            "Pair with pickles or papad for a traditional Rajasthani meal."
+        ],
+        "storageAndHeating": [
+            "Baati can be stored for 1–2 days in airtight container; reheat in oven.",
+            "Dal can be refrigerated for up to 2 days; reheat gently before serving.",
+            "Churma can be stored for 3–4 days in an airtight container."
+        ],
+        "nutritionalInfo": {
+            "Calories": "550 kcal",
+            "Protein": "14g",
+            "Carbs": "70g",
+            "Fat": "25g",
+            "Fiber": "8g",
+            "Note": "(Values approximate; vary based on ingredients and ghee used.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I make baati without semolina?",
+                "answer": "Yes, whole wheat flour alone works fine; semolina adds slight crispiness."
+            },
+            {
+                "question": "Can I prepare churma without ghee?",
+                "answer": "Ghee is essential for flavor, but oil can be used in a pinch."
+            },
+            {
+                "question": "Can dal be made in advance?",
+                "answer": "Yes, store in fridge and reheat gently before serving."
+            }
+        ],
+        "closingMessage": "Enjoy the royal flavors of Rajasthan with this Dal Baati Churma recipe — a complete, hearty, and festive meal!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "Gatte ki Sabzi",
+            "link": "newpage.html?id=8"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Gatte ki Sabzi – Spiced Gram Flour Dumplings in Yogurt Gravy",
+        "description": "A traditional Rajasthani dish made with gram flour dumplings cooked in a spiced yogurt-based gravy. Perfect with roti or steamed rice.",
+        "image": "/frontend/img/82.png",
+        "quote": "Savor the authentic taste of Rajasthan with these soft, spiced gatte in a tangy yogurt gravy!",
+        "quickInfo": {
+            "prepTime": "25 min",
+            "cookTime": "30 min",
+            "totalTime": "55 min",
+            "servings": "4",
+            "difficulty": "Medium"
+        },
+        "introduction": [
+            "Gatte ki Sabzi is a classic Rajasthani vegetarian dish featuring gram flour (besan) dumplings cooked in a spiced yogurt gravy.",
+            "It is a hearty, flavorful dish often served during festivals and special occasions with roti or rice."
+        ],
+        "history": [
+            "Originating in Rajasthan, Gatte ki Sabzi showcases the use of gram flour as a staple ingredient in arid regions where vegetables were scarce.",
+            "The dish has become a signature Rajasthani delicacy, representing the state’s unique culinary traditions.",
+            "Traditionally, the dumplings are cooked in a yogurt-based gravy seasoned with regional spices."
+        ],
+        "inner1": [
+            "Protein-rich and vegetarian-friendly.",
+            "Tangy, spiced yogurt gravy.",
+            "Perfect accompaniment for roti or rice.",
+            "Authentic Rajasthani flavors.",
+            "Hearty and comforting."
+        ],
+        "ytlink": [
+            "https://www.youtube.com/embed/rOp4cKdsbQw?si=-L_wTku5a0P7TrdW"
+        ],
+        "ingredients": [
+            {
+                "category": "For Gatte (Dumplings)",
+                "items": [
+                    "1 cup gram flour (besan)",
+                    "2 tbsp oil",
+                    "1/2 tsp red chili powder",
+                    "1/4 tsp turmeric powder",
+                    "1/2 tsp carom seeds (ajwain)",
+                    "Salt to taste",
+                    "Water as needed to knead dough"
+                ]
+            },
+            {
+                "category": "For Gravy",
+                "items": [
+                    "1 cup yogurt (curd), whisked",
+                    "1 tbsp gram flour (besan)",
+                    "2 tbsp oil",
+                    "1 tsp cumin seeds",
+                    "1/2 tsp turmeric powder",
+                    "1 tsp coriander powder",
+                    "1/2 tsp red chili powder",
+                    "1/2 tsp garam masala",
+                    "1/2 tsp fennel seeds (optional)",
+                    "Salt to taste",
+                    "2 cups water",
+                    "Fresh coriander leaves for garnish"
+                ]
+            }
+        ],
+        "instructions": [
+            {
+                "steps": "Step 1 – Prepare Gatte",
+                "items": [
+                    "Mix gram flour, spices, and oil with enough water to make a firm dough.",
+                    "Roll into cylindrical shapes (about 1-inch diameter) and boil in salted water for 8–10 minutes until cooked.",
+                    "Drain, cool slightly, and cut into 1–2 inch pieces."
+                ]
+            },
+            {
+                "steps": "Step 2 – Prepare Gravy",
+                "items": [
+                    "Heat oil in a pan, add cumin seeds, and let them splutter.",
+                    "Mix yogurt with gram flour and add to the pan, stirring continuously to avoid curdling.",
+                    "Add turmeric, coriander powder, red chili powder, and salt.",
+                    "Add 2 cups water and bring to a simmer."
+                ]
+            },
+            {
+                "steps": "Step 3 – Cook Gatte in Gravy",
+                "items": [
+                    "Add boiled gatte pieces to the gravy.",
+                    "Simmer for 10–12 minutes so that gatte absorb flavors.",
+                    "Sprinkle garam masala and mix gently."
+                ]
+            },
+            {
+                "steps": "Step 4 – Serve",
+                "items": [
+                    "Garnish with fresh coriander leaves.",
+                    "Serve hot with roti, chapati, or steamed rice."
+                ]
+            }
+        ],
+        "chefsTips": [
+            "Ensure the yogurt is whisked smooth to prevent curdling.",
+            "Simmer gravy on low heat after adding gatte for better flavor absorption.",
+            "Optional fennel seeds add a subtle aromatic touch."
+        ],
+        "servingSuggestions": [
+            "Serve with hot chapati, roti, or steamed rice.",
+            "Accompany with a side of pickle or salad for a complete meal."
+        ],
+        "storageAndHeating": [
+            "Store in an airtight container in the fridge for up to 2 days.",
+            "Reheat gently on stovetop, stirring occasionally."
+        ],
+        "nutritionalInfo": {
+            "Calories": "320 kcal",
+            "Protein": "12g",
+            "Carbs": "35g",
+            "Fat": "15g",
+            "Fiber": "4g",
+            "Note": "(Values approximate; vary based on ingredients used.)"
+        },
+        "faqs": [
+            {
+                "question": "Can I make gatte in advance?",
+                "answer": "Yes, boil and store them in the fridge; add to gravy when ready to serve."
+            },
+            {
+                "question": "Can I use low-fat yogurt?",
+                "answer": "Yes, but the gravy will be less creamy."
+            },
+            {
+                "question": "Can I make it spicier?",
+                "answer": "Increase red chili powder or add green chilies to the gravy."
+            }
+        ],
+        "closingMessage": "Enjoy the rich, authentic flavors of Rajasthan with this Gatte ki Sabzi — a hearty, comforting, and traditional meal!",
+        "nextSuggestion": {
+            "label": "Continue with",
+            "title": "Ker Sangri Sabzi",
+            "link": "newpage.html?id=9"
+        }
+    }
+]

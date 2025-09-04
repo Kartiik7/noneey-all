@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Ubuntu:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: ; */
+    background-color: #eee7e7;
+    color: black;
+    font-family: 'Ubuntu';
+    font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+p,
+input,
+label,
+button,
+div,
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #292828;
+}
+
+header {
+    background-color: rgb(199, 185, 168);
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+    position:fixed;
+}
+
+header h1 {
+    padding-left: 30px;
+}
+
+/* Remove ul styles for navbar */
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar links container */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+/* Remove nav li styles */
+
+.navbar-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.6rem;
+    /* display: block; */
+    padding: 10px 16px;
+    letter-spacing: 2px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    background: #f5f5f5;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0 5px;
+}
+
+.btn {
+    background-color: rgb(117, 129, 67);
+    border-radius: 30px;
+}
+
+.main-div {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%, -50%);
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.heading-div {
+    max-width: 700px;
+    letter-spacing: 2px;
+    position: relative;
+    height: 250px;
+}
+
+.heading-div h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.heading-div h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    font-weight: 200;
+}
+
+.heading-div .btn {
+    margin-top: 40px;
+    padding: 12px 18px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.smoothie img {
+    width: 300px;
+    background-size: cover;
+    margin-right: 30px;
+}
+
+
+form {
+    background-color: rgba(209, 203, 197, 0.616);
+    display: inline-block;
+    width: 350px;
+    padding: 30px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form h2 {
+    font-size: 2.4em;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px;
+    width: 100px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 0;
+    display: block;
+    letter-spacing: 2px;
+}
+
+/* Extra small devices (phones, portrait, <576px) */
+@media (max-width: 575px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-links {
+        width: 100%;
+    }
+    .navbar-link {
+        font-size: 1em;
+    }
+    form {
+        width: 80%;
+        padding: 12px;
+        font-size: 17px;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    
+    form {
+        width: 80%;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {}
+
+    header h1 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-right: 0;
+        justify-content: space-around;
+    }
+
+    .navbar-link {
+        font-size: 0.6rem;
+        padding: 10px 10px;
+        width: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    form {
+        width: 70%;
+        padding: 15px;
+        font-size: 16px;
+    }
+}

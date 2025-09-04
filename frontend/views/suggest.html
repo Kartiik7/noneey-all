@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest a Recipe / Improvement - Smooocha</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/responsive.css"> -->
+    <link rel="stylesheet" href="../css/suggest.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/frontend/views/index.html">Smooocha Recp</a></h1>
+        <div class="navbar-links">
+            <a class="navbar-link" href="index.html">Home</a>
+            <a class="navbar-link" href="login.html">Log In</a>
+            <a class="btn navbar-link" href="signup.html">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <section class="form-section">
+            <h2>Suggest a new recipe or improvement</h2>
+            <p>Share an idea for a new recipe or an improvement to an existing one. If you're signed in the suggestion will be submitted with your session; otherwise you can include your name and email.</p>
+
+            <form id="suggestForm" class="suggest-form">
+                <label for="title">Title *</label>
+                <input id="title" name="title" type="text" required>
+
+                <label for="description">Short description</label>
+                <textarea id="description" name="description" rows="3"></textarea>
+
+                <label for="ingredients">Ingredients (one per line)</label>
+                <textarea id="ingredients" name="ingredients" rows="4" placeholder="eg. 1 cup milk\n2 tbsp sugar"></textarea>
+
+                <label for="steps">Steps / Instructions (one per line)</label>
+                <textarea id="steps" name="steps" rows="5" placeholder="eg. Mix ingredients\nHeat for 10 mins"></textarea>
+
+                <label for="authorName">Your name *</label>
+                <input id="authorName" name="authorName" type="text" required>
+
+                <label for="email">Your email *</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="image">Image URL (optional)</label>
+                <input id="image" name="image" type="url">
+
+                <label for="video">Video URL (optional)</label>
+                <input id="video" name="video" type="url">
+
+                <div class="form-actions">
+                    <button id="reset" class="btn" type="reset">Reset</button>
+                    <button class="btn" type="submit">Submit suggestion</button>
+                </div>
+            </form>
+
+            <div id="msg" class="form-message" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2025 by KarTech Smoocha</p>
+    </footer>
+
+    <script src="../js/suggest.js"></script>
+</body>
+</html>
