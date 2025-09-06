@@ -160,23 +160,23 @@
         }
     };
 
-    // Load data
-    fetch("https://remebrer.onrender.com/api/recipes")   // unified deployed backend
-    .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-    })
-    .then(data => {
-        // Assuming you already have functions renderRecipe() & pickRecipe()
-        renderRecipe(pickRecipe(data));
-    })
-    .catch(err => {
-        console.error("Error fetching recipe(s):", err);
-        const root = document.querySelector(".main-container2");
-        if (root) {
-            root.insertAdjacentHTML("afterbegin",
-                `<p style="color:#b00">Failed to load recipes. Check console.</p>`
-            );
+    // Load data using async/await
+    async function loadRecipes() {
+        try {
+            const response = await fetch("https://noneey-all.onrender.com/api/recipes"); // unified deployed backend
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
+            // Assuming you already have functions renderRecipe() & pickRecipe()
+            renderRecipe(pickRecipe(data));
+        } catch (err) {
+            console.error("Error fetching recipe(s):", err);
+            const root = document.querySelector(".main-container2");
+            if (root) {
+                root.insertAdjacentHTML("afterbegin",
+                    `<p style="color:#b00">Failed to load recipes. Check console.</p>`
+                );
+            }
         }
-    });
+    }
+    loadRecipes();
 })();

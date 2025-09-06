@@ -7,42 +7,41 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Always use deployed Render backend
-  const API_BASE = "https://remebrer.onrender.com";
+  const API_BASE = "https://noneey-all.onrender.com";
 
-  // Primary fetch: recipeCards endpoint (no limit)
-  fetch(`${API_BASE}/api/recipesCard`)
-    .then((res) => {
+  // Primary fetch: recipeCards endpoint (no limit) using async/await
+  async function loadRecipeCards() {
+    try {
+      const res = await fetch(`${API_BASE}/api/recipesCard`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
-    })
-    .then((raw) => {
+      const raw = await res.json();
       const recipes = Array.isArray(raw) ? raw : [];
       if (!recipes.length) throw new Error("Empty recipe list");
       renderCards(recipes);
-    })
-    .catch((err) => {
+    } catch (err) {
       console.warn("Falling back to local recipeCards.json:", err.message);
-
       // Fallback: local static JSON
-      // fetch("../data/recipeCards.json")
-      //   .then((r) =>
-      //     r.ok ? r.json() : Promise.reject(new Error(`Fallback HTTP ${r.status}`))
-      //   )
-      //   .then((data) => renderCards(Array.isArray(data) ? data : [data]))
-      //   .catch((fbErr) => {
-      //     console.error("Error loading any recipes:", fbErr);
-      //     container.insertAdjacentHTML(
-      //       "afterbegin",
-      //       `<p style="color:#b00">Could not load recipes. Check Console.</p>`
-      //     );
-      //   });
-    });
+      try {
+        const r = await fetch("../data/recipeCards.json");
+        if (!r.ok) throw new Error(`Fallback HTTP ${r.status}`);
+        const data = await r.json();
+        renderCards(Array.isArray(data) ? data : [data]);
+      } catch (fbErr) {
+        console.error("Error loading any recipes:", fbErr);
+        container.insertAdjacentHTML(
+          "afterbegin",
+          `<p style="color:#b00">Could not load recipes. Check Console.</p>`
+        );
+      }
+    }
+  }
+  loadRecipeCards();
 
   function renderCards(recipes) {
     const frag = document.createDocumentFragment();
 
     recipes.forEach((r) => {
-      const id = r._id || r.id || "";
+      const id = r.id || r._id || "";
       const title = r.title || "Untitled";
       const img = r.imageUrl || r.image || "";
       const cookTime =

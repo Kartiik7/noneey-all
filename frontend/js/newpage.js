@@ -126,14 +126,13 @@ function renderNextSuggestion(next) {
 // ✅ Fetch Recipe Data from JSON
 async function loadRecipe() {
   try {
-    const response = await fetch("../data/recipes.json"); // adjust path
-    if (!response.ok) throw new Error("Failed to load recipes.json");
-
-    const data = await response.json();
     const recipeId = getRecipeId();
-    const recipe = data.find(r => r.id == recipeId);
+    const API_BASE = "https://noneey-all.onrender.com";
+    const response = await fetch(`${API_BASE}/api/recipes/${recipeId}`);
+    if (!response.ok) throw new Error("Failed to load recipe from backend");
+    const recipe = await response.json();
 
-    if (!recipe) {
+    if (!recipe || !recipe.title) {
       document.querySelector(".main-container2").innerHTML =
         "<h2>Recipe not found</h2>";
       return;
@@ -154,11 +153,10 @@ async function loadRecipe() {
     if (recipe.faqs) renderFaqs(recipe.faqs);
     if (recipe.closingMessage) renderClosingBox(recipe.closingMessage);
     if (recipe.next) renderNextSuggestion(recipe.next);
-
   } catch (err) {
     console.error("Error loading recipe:", err);
   }
 }
 
 // ✅ Run on page load
-// loadRecipe();
+loadRecipe();
