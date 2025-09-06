@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Smooocha</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .profile-card { max-width:600px; margin:120px auto 80px; background:#f5f3f1; padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .profile-card h2 { margin-bottom:10px; }
+    .profile-meta { list-style:none; padding:0; margin:15px 0 25px; }
+    .profile-meta li { margin:6px 0; font-size:.95rem; }
+    .profile-actions { display:flex; gap:14px; }
+    .profile-actions button { flex:0 0 auto; }
+    .tag { background:#c7b9a8; padding:2px 8px; border-radius:12px; font-size:.7rem; text-transform:uppercase; letter-spacing:1px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/frontend/views/index.html">Smooocha Recp</a></h1>
+    <div class="navbar-links"></div>
+  </header>
+
+  <main>
+    <section class="profile-card" id="profileCard">
+      <h2 id="profName">Your Profile</h2>
+      <span class="tag" id="profRole">user</span>
+      <ul class="profile-meta">
+        <li><strong>Email:</strong> <span id="profEmail">-</span></li>
+        <li><strong>Member Since:</strong> <span id="profCreated">-</span></li>
+        <li><strong>Last Updated:</strong> <span id="profUpdated">-</span></li>
+        <li><strong>User ID:</strong> <span id="profId">-</span></li>
+      </ul>
+      <div class="profile-actions">
+        <button class="btn" id="logoutBtn" type="button">Logout</button>
+        <button class="btn" id="homeBtn" type="button">Home</button>
+      </div>
+      <p id="profileMsg" style="margin-top:18px; font-size:.9rem; color:#555;"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright 2025 by KarTech Smoocha</p>
+  </footer>
+
+  <script src="../js/session.js"></script>
+  <script>
+    (function(){
+      const API_BASE = 'https://noneey-all.onrender.com';
+      function fmt(d){ if(!d) return '-'; try { return new Date(d).toLocaleDateString(); } catch(e){ return d; } }
+      async function loadProfile(){
+        const token = localStorage.getItem('token');
+        if(!token){ document.getElementById('profileMsg').textContent='You are not logged in.'; return; }
+        try {
+          const res = await fetch(API_BASE + '/api/auth/me', { headers:{ 'Authorization':'Bearer '+token }});
+          if(!res.ok) { document.getElementById('profileMsg').textContent='Session expired. Please log in again.'; return; }
+          const u = await res.json();
+          document.getElementById('profName').textContent = u.username || 'User';
+          document.getElementById('profEmail').textContent = u.email || '-';
+          document.getElementById('profRole').textContent = u.role || 'user';
+          document.getElementById('profCreated').textContent = fmt(u.createdAt);
+          document.getElementById('profUpdated').textContent = fmt(u.updatedAt);
+          document.getElementById('profId').textContent = u.id || '-';
+        } catch(e){ document.getElementById('profileMsg').textContent='Failed to load profile.'; }
+      }
+      document.getElementById('logoutBtn').addEventListener('click', async ()=>{
+        try { await fetch(API_BASE + '/api/auth/logout', { method:'POST', credentials:'include' }); } catch(e){}
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        location.href='/frontend/views/index.html';
+      });
+      document.getElementById('homeBtn').addEventListener('click', ()=> location.href='/frontend/views/index.html');
+      document.addEventListener('DOMContentLoaded', loadProfile);
+      loadProfile();
+    })();
+  </script>
+</body>
+</html>

@@ -1,4 +1,8 @@
-// Register
+const User = require('../model/User');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+// Register a new user (basic public signup)
 const register = async (req, res) => {
     const { username, email, password } = req.body;
     try {
@@ -14,16 +18,14 @@ const register = async (req, res) => {
             user: {
                 id: savedUser._id,
                 username: savedUser.username,
-                email: savedUser.email
+                email: savedUser.email,
+                role: savedUser.role
             }
         });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 };
-const User = require('../model/User');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 
 // Login
 const login = async (req, res) => {
@@ -92,4 +94,29 @@ const handleRefreshToken = async (req, res) => {
     }
 };
 
-module.exports = { login, handleRefreshToken, register };
+// Logout: invalidate refresh token server-side and clear cookie
+const logout = async (req, res) => {
+    const cookies = req.cookies;
+    if (!cookies?.jwt) return res.status(204).end(); // Nothing to do
+    const refreshToken = cookies.jwt;
+    try {
+        const user = await User.findOne({ refreshToken });
+        if (user) {
+            user.refreshToken = '';
+            await user.save();
+        }
+        res.clearCookie('jwt', { httpOnly: true, sameSite: 'Strict', secure: false });
+        return res.json({ message: 'Logged out' });
+    } catch (err) {
+        return res.status(500).json({ message: 'Server error' });
+    }
+};
+
+// Return current authenticated user (requires verifyToken middleware)
+const me = async (req, res) => {
+    if (!req.user) return res.status(401).json({ message: 'Not authenticated' });
+    const { _id, username, email, role, createdAt, updatedAt } = req.user;
+    res.json({ id: _id, username, email, role, createdAt, updatedAt });
+};
+
+module.exports = { login, handleRefreshToken, register, logout, me };

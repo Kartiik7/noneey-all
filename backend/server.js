@@ -12,6 +12,7 @@ const authRoutes = require("./routes/authRoutes");
 const suggestionRoutes = require("./routes/suggestionRoutes");
 const recipeRoutes = require("./routes/recipeRoutes");
 const recipeCardRoutes = require('./routes/recipeCardRoutes');
+const { verifyToken } = require('./middleware/authMiddleware');
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
 
@@ -74,6 +75,13 @@ app.get('/api/recipes/:id', async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Server error', error: error.message });
     }
+});
+
+// Fallback current user endpoint if /api/auth/me unavailable on some deployments
+app.get('/api/me', verifyToken, (req, res) => {
+    if(!req.user) return res.status(401).json({ message: 'Not authenticated' });
+    const { _id, username, email, role, createdAt, updatedAt } = req.user;
+    res.json({ id:_id, username, email, role, createdAt, updatedAt });
 });
 
 // Start server
