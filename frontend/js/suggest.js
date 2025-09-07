@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE = 'https://noneey-all.onrender.com';
+    const API_BASE = 'http://localhost:5000';
     const form = document.getElementById('suggestForm');
     const msg = document.getElementById('msg');
 

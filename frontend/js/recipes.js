@@ -83,9 +83,11 @@ function renderClosingBox(message) {
 
 function renderNextSuggestion(next) {
     const nextDiv = document.querySelector(".next-suggestion");
+    const nextTitle = document.getElementById("next-title");
+    nextTitle = next.title;
     nextDiv.innerHTML = `
-    <span>Continue with <i class="fa-solid fa-arrow-right"></i></span><br>
-    <span>${next.label} <a href="${next.link}"><i class="fa-solid fa-arrow-right-long"></i></a></span>
+    <span>Continue with <i class="fa-solid fa-arrow-right"></i></span>
+    <span>${nextTitle}<a href="${next.link}"><i class="fa-solid fa-arrow-right-long"></i></a></span>
   `;
 }
 

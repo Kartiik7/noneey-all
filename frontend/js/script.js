@@ -163,7 +163,7 @@
     // Load data using async/await
     async function loadRecipes() {
         try {
-            const response = await fetch("https://noneey-all.onrender.com/api/recipes"); // unified deployed backend
+            const response = await fetch("http://localhost:5000/api/recipes"); // unified deployed backend
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const data = await response.json();
             // Assuming you already have functions renderRecipe() & pickRecipe()
