@@ -33,8 +33,11 @@
             <span><i>"A royal vegetarian biryani that’s rich, fragrant, and fit for kings — in your kitchen
                     today!"</i></span>
             <ul id="bcbtn">
-                <li><a href="#">Add to My Book <img id="add-to-book" src="../img/recipebook.svg" alt=""></a></li>
-                <li><a href="#">Scroll to video <i class="fa-solid fa-down-long"></i></a></li>
+                <li>
+                    <button id="addToBookBtn" class="btn">Add to My Book</button>
+                    <a href="" title="Add to My Book"><img id="add-to-book" src="../img/recipebook.svg" alt=""></a>
+                </li>
+                <li id="goToBoxBtn"><a>Scroll to video <i class="fa-solid fa-down-long"></i></a></li>
             </ul>
         </div>
         <div class="inner-container1">
@@ -81,13 +84,12 @@
             </div>
             <div id="inner1">
                 <h3>Why you'll Love this Recipe</h3>
-                
+
             </div>
         </div>
-        <div class="yt-vid">
+        <div class="yt-vid" id="myBox">
             <h2>Youtube Video (For reference)</h2>
-            <iframe width="560" height="315" src=""
-                title="YouTube video player" frameborder="0"
+            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
@@ -96,7 +98,7 @@
             <section id="ingredients">
                 <h3>Ingredients</h3>
 
-                
+
             </section>
 
             <section id="instructions">
@@ -106,38 +108,48 @@
 
             <section id="chefs-tips">
                 <h3>Chef’s Tips</h3>
-                
+
             </section>
         </article>
         <div class="other-info">
             <h3>Serving Suggestions</h3>
-            
+
 
             <h3>Storage and Heating</h3>
-            
+
             <section id="nutritional-info">
                 <h3>Nutrional Info(per Serving)</h3>
-                
+
             </section>
             <div class="faqs">
                 <h2>Frequently Asked Questions</h2>
-                
+
             </div>
         </div>
         <div class="closing-box">
             <span><i>"he taste of royal kitchens to your home — try this Shahi Veg Biryani today and share your
-                    creation  us!"</i></span>
+                    creation us!"</i></span>
             <h3 id="feedback">Comment here: </h3>
             <textarea type="text" name="" placeholder="Comment Here......." id="feedback-box"></textarea>
         </div>
         <div class="next-suggestion">
             <span href="#">Continue with <i class="fa-solid fa-arrow-right"></i></span>
             <br>
-            <span><h3 id="next-title">hii</h3><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></span>
+            <span>
+                <h3 id="next-title">hii</h3><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+            </span>
         </div>
     </div>
 
+    <script src="../js/addToBook.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+        document.getElementById("goToBoxBtn").addEventListener("click", () => {
+            const target = document.getElementById("myBox");
+            target.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+        });
+    </script>
+
 </body>
 
 </html>

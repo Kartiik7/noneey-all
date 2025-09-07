@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .mybook-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .recipe-card .body {
+            padding: 12px;
+            flex: 1 1 auto;
+        }
+
+        .recipe-card h3 { margin: 0 0 8px 0; font-size: 1.05rem }
+        .meta { font-size: 0.9rem; color: #555; margin-bottom: 8px }
+        .card-footer { display:flex; gap:8px; padding:12px; border-top:1px solid #eee; background:#fafafa }
+        .btn { padding:8px 12px; border-radius:6px; border:none; background:#e2c9a2; cursor:pointer; text-decoration:none; color:#222 }
+        .empty { padding:24px; text-align:center; color:#666 }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-title"><a href="/">Smooocha Recp</a></h1>
+    </header>
+
+    <main>
+        <h2 style="padding:16px">My Book</h2>
+        <div style="padding:0 16px 8px 16px">
+            <strong>Stored IDs (debug):</strong>
+            <div id="debugStoredIds" style="font-family:monospace; color:#333; margin-top:6px"></div>
+        </div>
+        <div id="myBookRoot" class="mybook-container"></div>
+        <div id="emptyMsg" class="empty" style="display:none">No recipes added yet.</div>
+    </main>
+
+    <script>
+        (async function () {
+            const KEY = "myBook";
+
+            function getIds() {
+                try { return (JSON.parse(localStorage.getItem(KEY)) || []).map(String); }
+                catch (e) { console.error('Failed to read myBook', e); return []; }
+            }
+
+            const ids = getIds();
+            // show stored ids for debugging
+            const dbg = document.getElementById('debugStoredIds');
+            if (dbg) dbg.textContent = ids.length ? ids.join(', ') : '(none)';
+            const root = document.getElementById('myBookRoot');
+            const empty = document.getElementById('emptyMsg');
+
+            if (!ids.length) {
+                empty.style.display = 'block'; root.style.display = 'none'; return;
+            }
+
+            // Try fetch from API. Use current origin if available, otherwise fallback to localhost:5000 then deployed host.
+            const originsToTry = [];
+            if (window.location && window.location.origin && window.location.origin !== 'null') originsToTry.push(window.location.origin);
+            originsToTry.push('http://localhost:5000');
+            originsToTry.push('https://noneey-all-1.onrender.com');
+
+            async function fetchRecipeById(id) {
+                for (const origin of originsToTry) {
+                    try {
+                        const url = `${origin.replace(/\/$/, '')}/api/recipes/${id}`;
+                        const resp = await fetch(url, { cache: 'no-store' });
+                        if (!resp.ok) continue;
+                        const data = await resp.json();
+                        if (data && (data.title || data._id || data.id)) return data;
+                    } catch (e) {
+                        // try next origin
+                    }
+                }
+                return null;
+            }
+
+            async function fetchAllRecipes() {
+                for (const origin of originsToTry) {
+                    try {
+                        const url = `${origin.replace(/\/$/, '')}/api/recipes`;
+                        const resp = await fetch(url, { cache: 'no-store' });
+                        if (!resp.ok) continue;
+                        const data = await resp.json();
+                        if (data && data.length) return data;
+                    } catch (e) {
+                        // try next
+                    }
+                }
+                return null;
+            }
+
+            try {
+                // First try per-id fetches in parallel
+                const settled = await Promise.allSettled(ids.map(id => fetchRecipeById(id)));
+                const perId = settled.map((s, i) => ({ id: ids[i], recipe: s.status === 'fulfilled' ? s.value : null }));
+                const found = perId.filter(p => p.recipe);
+
+                if (found.length) {
+                    // render those we found
+                    found.forEach(({ id, recipe: r }) => renderCardFor(r, id));
+                    return;
+                }
+
+                // Fallback: try to fetch the entire list and match IDs client-side
+                const all = await fetchAllRecipes();
+                if (!all || !all.length) {
+                    root.style.display = 'none'; empty.style.display = 'block';
+                    return;
+                }
+
+                const map = new Map();
+                all.forEach(d => map.set(String(d._id || d.id), d));
+
+                let any = false;
+                ids.forEach(id => {
+                    const r = map.get(String(id));
+                    if (!r) return;
+                    any = true;
+                    renderCardFor(r, id);
+                });
+
+                if (!any) { root.style.display = 'none'; empty.style.display = 'block'; }
+            } catch (err) {
+                console.error('Failed to load recipes from API', err);
+                root.innerHTML = '<p style="color:#b00">Failed to load saved recipes. Check console.</p>';
+            }
+
+            // Helper to render card and wire remove
+            function renderCardFor(r, storedId) {
+                const card = document.createElement('article'); card.className = 'recipe-card';
+                const img = document.createElement('img'); img.src = r.imageUrl || r.image || '../img/default.png'; img.alt = r.title || 'Recipe Image';
+                const body = document.createElement('div'); body.className = 'body';
+                const title = document.createElement('h3'); title.textContent = r.title || `Recipe ${r._id || storedId}`;
+                const meta = document.createElement('div'); meta.className = 'meta';
+                meta.textContent = `${r.cookingTime || r.quickInfo?.totalTime || '-'} • ${r.difficulty || r.quickInfo?.difficulty || '-'} • ⭐ ${r.rating || '-'}`;
+                const footer = document.createElement('div'); footer.className = 'card-footer';
+                const openBtn = document.createElement('a'); openBtn.className='btn'; openBtn.href = `newpage.html?id=${r._id || r.id || storedId}`; openBtn.textContent = 'Open';
+                const removeBtn = document.createElement('button'); removeBtn.className='btn'; removeBtn.textContent='Remove';
+                removeBtn.addEventListener('click', ()=>{
+                    const current = (JSON.parse(localStorage.getItem(KEY)) || []).map(String);
+                    const idx = current.indexOf(String(storedId)); if (idx>=0) { current.splice(idx,1); localStorage.setItem(KEY, JSON.stringify(current)); }
+                    card.remove();
+                    if ((JSON.parse(localStorage.getItem(KEY)) || []).length === 0) { empty.style.display='block'; root.style.display='none'; }
+                });
+
+                body.appendChild(title); body.appendChild(meta);
+                footer.appendChild(openBtn); footer.appendChild(removeBtn);
+                card.appendChild(img); card.appendChild(body); card.appendChild(footer);
+                root.appendChild(card);
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
