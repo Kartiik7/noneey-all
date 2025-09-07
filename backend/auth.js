@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // If frontend is served on a different port (eg Live Server 5500),
     // point API_BASE to the backend. When served from the backend itself,
     // keep API_BASE empty to use relative paths.
-    const API_BASE = (window.location.port && window.location.port !== '5000') ? 'https://noneey-all.onrender.com' : '';
+    const API_BASE = (window.location.port && window.location.port !== '5000') ? 'http://localhost:5000' : '';
     // Login page
     const loginForm = document.querySelector('body > form.signup-main');
     if (loginForm && loginForm.querySelector('h2')?.textContent?.toLowerCase().includes('log in')) {

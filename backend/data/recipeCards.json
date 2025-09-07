@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Shahi Veg Biryani",
+    "image": "/frontend/img/11.png",
+    "cookingTime": "50 min",
+    "difficulty": "Medium",
+    "budget": "400-500 INR",
+    "rating": "4.8/5.0",
+    "link": "newpage.html?id=1"
+  },
+  {
+    "id": 2,
+    "title": "Paneer Biryani",
+    "image": "/frontend/img/21.png",
+    "cookingTime": "45 min",
+    "difficulty": "Medium",
+    "budget": "350-450 INR",
+    "rating": "4.7/5.0",
+    "link": "newpage.html?id=2"
+  },
+  {
+    "id": 3,
+    "title": "Chole Masala",
+    "image": "/frontend/img/31.png",
+    "cookingTime": "20 min",
+    "difficulty": "Easy",
+    "budget": "50-70 INR",
+    "rating": "4.5/5.0",
+    "link": "newpage.html?id=3"
+  },
+  {
+    "id": 4,
+    "title": "Poha Maharashtrian Style",
+    "image": "/frontend/img/41.png",
+    "cookingTime": "25 min",
+    "difficulty": "Easy",
+    "budget": "60-80 INR",
+    "rating": "4.6/5.0",
+    "link": "newpage.html?id=4"
+  },
+  {
+    "id": 5,
+    "title": "Kerala Avial",
+    "image": "/frontend/img/51.png",
+    "cookingTime": "40 min",
+    "difficulty": "Medium",
+    "budget": "150-200 INR",
+    "rating": "4.7/5.0",
+    "link": "newpage.html?id=5"
+  },
+  {
+    "id": 6,
+    "title": "Shorshe Ilish",
+    "image": "/frontend/img/61.png",
+    "cookingTime": "35 min",
+    "difficulty": "Medium",
+    "budget": "500-600 INR",
+    "rating": "4.9/5.0",
+    "link": "newpage.html?id=6"
+  },
+  {
+    "id": 7,
+    "title": "Dal Baati Churma",
+    "image": "/frontend/img/71.png",
+    "cookingTime": "80 min",
+    "difficulty": "Medium",
+    "budget": "300-400 INR",
+    "rating": "4.8/5.0",
+    "link": "newpage.html?id=7"
+  },
+  {
+    "id": 8,
+    "title": "Gatte ki Sabzi",
+    "image": "/frontend/img/81.png",
+    "cookingTime": "55 min",
+    "difficulty": "Medium",
+    "budget": "250-350 INR",
+    "rating": "4.7/5.0",
+    "link": "newpage.html?id=8"
+  }
+]
