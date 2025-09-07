@@ -77,6 +77,46 @@
     "difficulty": "Medium",
     "budget": "250-350 INR",
     "rating": "4.7/5.0",
-    "link": "newpage.html?id=8"
+    "link": "newpage.html?id=9"
+  },
+  {
+    "id": 9,
+    "title": "Tomato Rasam",
+    "image": "/frontend/img/91.png",
+    "cookingTime": "35 min",
+    "difficulty": "Easy",
+    "budget": "100-150 INR",
+    "rating": "4.6/5.0",
+    "link": "newpage.html?id=10"
+  },
+  {
+    "id": 10,
+    "title": "Undhiyu",
+    "image": "/frontend/img/101.png",
+    "cookingTime": "1 hr 10 min",
+    "difficulty": "Hard",
+    "budget": "400-500 INR",
+    "rating": "4.8/5.0",
+    "link": "newpage.html?id=13"
+  },
+  {
+    "id": 11,
+    "title": "Vada Pav",
+    "image": "/frontend/img/181.png",
+    "cookingTime": "40 min",
+    "difficulty": "Medium",
+    "budget": "150-200 INR",
+    "rating": "4.9/5.0",
+    "link": "newpage.html?id=18"
+  },
+  {
+    "id": 12,
+    "title": "Baingan Bharta",
+    "image": "/frontend/img/31.png",
+    "cookingTime": "45 min",
+    "difficulty": "Medium",
+    "budget": "150-200 INR",
+    "rating": "4.7/5.0",
+    "link": "newpage.html?id=3"
   }
 ]

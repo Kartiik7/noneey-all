@@ -127,7 +127,7 @@ function renderNextSuggestion(next) {
 async function loadRecipe() {
   try {
     const recipeId = getRecipeId();
-    const API_BASE = "http://localhost:5000";
+    const API_BASE = "https://noneey-all-1.onrender.com";
     const response = await fetch(`${API_BASE}/api/recipes/${recipeId}`);
     if (!response.ok) throw new Error("Failed to load recipe from backend");
     const recipe = await response.json();

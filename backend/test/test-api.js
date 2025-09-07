@@ -3,7 +3,7 @@
 const http = require('http');
 
 // Test configuration
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://noneey-all-1.onrender.com';
 const TEST_TIMEOUT = 5000;
 
 // Simple test runner

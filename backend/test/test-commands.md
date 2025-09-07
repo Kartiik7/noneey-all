@@ -10,7 +10,7 @@ npm start
 
 ### 1. Submit a Suggestion (User)
 ```bash
-curl -X POST http://localhost:5000/api/suggestions \
+curl -X POST https://noneey-all-1.onrender.com/api/suggestions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
@@ -25,19 +25,19 @@ curl -X POST http://localhost:5000/api/suggestions \
 
 ### 2. Get All Pending Suggestions (Admin)
 ```bash
-curl -X GET http://localhost:5000/api/suggestions \
+curl -X GET https://noneey-all-1.onrender.com/api/suggestions \
   -H "Authorization: Bearer ADMIN_JWT_TOKEN"
 ```
 
 ### 3. Approve a Suggestion (Admin)
 ```bash
-curl -X PATCH http://localhost:5000/api/suggestions/SUGGESTION_ID/approve \
+curl -X PATCH https://noneey-all-1.onrender.com/api/suggestions/SUGGESTION_ID/approve \
   -H "Authorization: Bearer ADMIN_JWT_TOKEN"
 ```
 
 ### 4. Reject a Suggestion (Admin)
 ```bash
-curl -X DELETE http://localhost:5000/api/suggestions/SUGGESTION_ID \
+curl -X DELETE https://noneey-all-1.onrender.com/api/suggestions/SUGGESTION_ID \
   -H "Authorization: Bearer ADMIN_JWT_TOKEN"
 ```
 
@@ -45,7 +45,7 @@ curl -X DELETE http://localhost:5000/api/suggestions/SUGGESTION_ID \
 
 ### 1. User Registration
 ```bash
-curl -X POST http://localhost:5000/api/signup \
+curl -X POST https://noneey-all-1.onrender.com/api/signup \
   -H "Content-Type: application/json" \
   -d '{
     "username": "testuser",
@@ -57,7 +57,7 @@ curl -X POST http://localhost:5000/api/signup \
 
 ### 2. User Login
 ```bash
-curl -X POST http://localhost:5000/api/login \
+curl -X POST https://noneey-all-1.onrender.com/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@example.com",
@@ -67,7 +67,7 @@ curl -X POST http://localhost:5000/api/login \
 
 ### 3. Admin Login
 ```bash
-curl -X POST http://localhost:5000/api/login \
+curl -X POST https://noneey-all-1.onrender.com/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@example.com",
@@ -79,12 +79,12 @@ curl -X POST http://localhost:5000/api/login \
 
 ### 1. Get All Recipes
 ```bash
-curl -X GET http://localhost:5000/api/recipes
+curl -X GET https://noneey-all-1.onrender.com/api/recipes
 ```
 
 ### 2. Create Recipe (Authenticated)
 ```bash
-curl -X POST http://localhost:5000/api/recipes \
+curl -X POST https://noneey-all-1.onrender.com/api/recipes \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
@@ -97,14 +97,14 @@ curl -X POST http://localhost:5000/api/recipes \
 
 ### 3. Get Recipe by ID
 ```bash
-curl -X GET http://localhost:5000/api/recipes/RECIPE_ID
+curl -X GET https://noneey-all-1.onrender.com/api/recipes/RECIPE_ID
 ```
 
 ## 🧪 Validation Tests
 
 ### 1. Test Missing Required Fields
 ```bash
-curl -X POST http://localhost:5000/api/suggestions \
+curl -X POST https://noneey-all-1.onrender.com/api/suggestions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
@@ -116,7 +116,7 @@ curl -X POST http://localhost:5000/api/suggestions \
 
 ### 2. Test Invalid Email Format
 ```bash
-curl -X POST http://localhost:5000/api/suggestions \
+curl -X POST https://noneey-all-1.onrender.com/api/suggestions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
@@ -128,18 +128,18 @@ curl -X POST http://localhost:5000/api/suggestions \
 
 ### 3. Test Unauthorized Access
 ```bash
-curl -X GET http://localhost:5000/api/suggestions
+curl -X GET https://noneey-all-1.onrender.com/api/suggestions
 ```
 
 ## 📊 Database Connection Test
 ```bash
 # Check if MongoDB is connected
-curl -X GET http://localhost:5000/
+curl -X GET https://noneey-all-1.onrender.com/
 ```
 
 ## 🔄 Token Refresh Test
 ```bash
-curl -X POST http://localhost:5000/api/refresh \
+curl -X POST https://noneey-all-1.onrender.com/api/refresh \
   -H "Content-Type: application/json" \
   -d '{
     "refreshToken": "YOUR_REFRESH_TOKEN"
@@ -168,10 +168,10 @@ npm start &
 sleep 3
 
 # Test server is running
-curl -X GET http://localhost:5000/
+curl -X GET https://noneey-all-1.onrender.com/
 
 # Test suggestion endpoint without auth (should fail)
-curl -X POST http://localhost:5000/api/suggestions \
+curl -X POST https://noneey-all-1.onrender.com/api/suggestions \
   -H "Content-Type: application/json" \
   -d '{"title":"Test","authorName":"Test","email":"test@test.com"}'
 

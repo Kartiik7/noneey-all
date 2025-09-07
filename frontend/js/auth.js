@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Unified deployed backend base URL
-    const API_BASE = 'http://localhost:5000';
+    const API_BASE = 'https://noneey-all-1.onrender.com';
     // Login page
     const loginForm = document.querySelector('body > form.signup-main');
     if (loginForm && loginForm.querySelector('h2')?.textContent?.toLowerCase().includes('log in')) {

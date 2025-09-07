@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://noneey-all-1.onrender.com";
 
   async function loadRecipeCards() {
     try {
