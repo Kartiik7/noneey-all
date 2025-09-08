@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const title = r.title || r.name || "Untitled";
 
       // image fallbacks commonly used in DBs
-      const img = r.imageUrl || r.image || r.img || r.imagePath || "";
+      const img = r.image;
 
       // prefer explicit fields used in your recipeCards collection
       const cookTime =

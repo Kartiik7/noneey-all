@@ -67,113 +67,183 @@
                 catch (e) { console.error('Failed to read myBook', e); return []; }
             }
 
-            const ids = getIds();
-            // show stored ids for debugging
-            const dbg = document.getElementById('debugStoredIds');
-            if (dbg) dbg.textContent = ids.length ? ids.join(', ') : '(none)';
-            const root = document.getElementById('myBookRoot');
-            const empty = document.getElementById('emptyMsg');
+                const ids = getIds();
+                // show stored ids for debugging
+                const dbg = document.getElementById('debugStoredIds');
+                if (dbg) dbg.textContent = ids.length ? ids.join(', ') : '(none)';
+                const root = document.getElementById('myBookRoot');
+                const empty = document.getElementById('emptyMsg');
 
-            if (!ids.length) {
-                empty.style.display = 'block'; root.style.display = 'none'; return;
-            }
+                if (!ids.length) {
+                    empty.style.display = 'block'; root.style.display = 'none'; return;
+                }
 
-            // Try fetch from API. Use current origin if available, otherwise fallback to localhost:5000 then deployed host.
-            const originsToTry = [];
-            if (window.location && window.location.origin && window.location.origin !== 'null') originsToTry.push(window.location.origin);
-            originsToTry.push('http://localhost:5000');
-            originsToTry.push('https://noneey-all-1.onrender.com');
+                // Try fetch from API. If the page is served from a static dev server (Live Server on :5500 or file:),
+                // prefer known backend origins first so we don't hit the static server for /api/* which returns 404.
+                const originsToTry = [];
+                const KNOWN_BACKENDS = ['http://localhost:5000', 'https://noneey-all-1.onrender.com'];
+                const currentOrigin = (window.location && window.location.origin && window.location.origin !== 'null') ? window.location.origin : null;
+                const isStaticDevServer = currentOrigin && (/(:5500$)|(^file:)/.test(currentOrigin) || window.location.protocol === 'file:');
 
-            async function fetchRecipeById(id) {
-                for (const origin of originsToTry) {
-                    try {
-                        const url = `${origin.replace(/\/$/, '')}/api/recipes/${id}`;
-                        const resp = await fetch(url, { cache: 'no-store' });
-                        if (!resp.ok) continue;
-                        const data = await resp.json();
-                        if (data && (data.title || data._id || data.id)) return data;
-                    } catch (e) {
-                        // try next origin
+                if (isStaticDevServer) {
+                    // try local backend first, then deployed, then current origin as last resort
+                    KNOWN_BACKENDS.forEach(u => originsToTry.push(u));
+                    if (currentOrigin) originsToTry.push(currentOrigin);
+                } else {
+                    // prefer same-origin (if it's actually the backend), then known backends
+                    if (currentOrigin) originsToTry.push(currentOrigin);
+                    KNOWN_BACKENDS.forEach(u => originsToTry.push(u));
+                }
+
+                // Helper to normalize various response shapes and pick the correct recipe
+                function extractRecipeFromResponse(data, id) {
+                    if (!data) return null;
+                    // If API returns an object with recipes array: { recipes: [...] }
+                    if (data.recipes && Array.isArray(data.recipes)) {
+                        return data.recipes.find(d => String(d._id || d.id) === String(id)) || null;
                     }
-                }
-                return null;
-            }
-
-            async function fetchAllRecipes() {
-                for (const origin of originsToTry) {
-                    try {
-                        const url = `${origin.replace(/\/$/, '')}/api/recipes`;
-                        const resp = await fetch(url, { cache: 'no-store' });
-                        if (!resp.ok) continue;
-                        const data = await resp.json();
-                        if (data && data.length) return data;
-                    } catch (e) {
-                        // try next
+                    // If response is array of recipes
+                    if (Array.isArray(data)) {
+                        return data.find(d => String(d._id || d.id) === String(id)) || null;
                     }
-                }
-                return null;
-            }
-
-            try {
-                // First try per-id fetches in parallel
-                const settled = await Promise.allSettled(ids.map(id => fetchRecipeById(id)));
-                const perId = settled.map((s, i) => ({ id: ids[i], recipe: s.status === 'fulfilled' ? s.value : null }));
-                const found = perId.filter(p => p.recipe);
-
-                if (found.length) {
-                    // render those we found
-                    found.forEach(({ id, recipe: r }) => renderCardFor(r, id));
-                    return;
+                    // If response is a single recipe object
+                    if (data && (data.title || data._id || data.id)) {
+                        // If the caller requested by id but backend returned a single object, verify match
+                        if (!data._id && !data.id) return data;
+                        if (String(data._id || data.id) === String(id)) return data;
+                        // mismatch
+                        return null;
+                    }
+                    return null;
                 }
 
-                // Fallback: try to fetch the entire list and match IDs client-side
-                const all = await fetchAllRecipes();
-                if (!all || !all.length) {
-                    root.style.display = 'none'; empty.style.display = 'block';
-                    return;
+                async function fetchRecipeById(id) {
+                    for (const origin of originsToTry) {
+                        const base = origin.replace(/\/$/, '');
+
+                        // 1) path param
+                        try {
+                            const url = `${base}/api/recipes/${encodeURIComponent(id)}`;
+                            const resp = await fetch(url, { cache: 'no-store' });
+                            console.debug('[myBook] tried', url, 'status', resp.status);
+                            if (resp.ok) {
+                                const data = await resp.json();
+                                const found = extractRecipeFromResponse(data, id);
+                                if (found) return found;
+                            }
+                        } catch (e) {
+                            console.debug('[myBook] fetch error (path) for', base, e && e.message);
+                            // try next form
+                        }
+
+                        // 2) query param _id
+                        try {
+                            const url = `${base}/api/recipes?_id=${encodeURIComponent(id)}`;
+                            const resp = await fetch(url, { cache: 'no-store' });
+                            console.debug('[myBook] tried', url, 'status', resp.status);
+                            if (resp.ok) {
+                                const data = await resp.json();
+                                const found = extractRecipeFromResponse(data, id);
+                                if (found) return found;
+                            }
+                        } catch (e) {
+                            console.debug('[myBook] fetch error (?_id) for', base, e && e.message);
+                            // try next
+                        }
+
+                        // 3) query param id
+                        try {
+                            const url = `${base}/api/recipes?id=${encodeURIComponent(id)}`;
+                            const resp = await fetch(url, { cache: 'no-store' });
+                            console.debug('[myBook] tried', url, 'status', resp.status);
+                            if (resp.ok) {
+                                const data = await resp.json();
+                                const found = extractRecipeFromResponse(data, id);
+                                if (found) return found;
+                            }
+                        } catch (e) {
+                            console.debug('[myBook] fetch error (?id) for', base, e && e.message);
+                            // ignore and continue to next origin
+                        }
+                    }
+                    return null;
                 }
 
-                const map = new Map();
-                all.forEach(d => map.set(String(d._id || d.id), d));
+                async function fetchAllRecipes() {
+                    for (const origin of originsToTry) {
+                        try {
+                            const url = `${origin.replace(/\/$/, '')}/api/recipes`;
+                            const resp = await fetch(url, { cache: 'no-store' });
+                            if (!resp.ok) continue;
+                            const data = await resp.json();
+                            if (data && data.length) return data;
+                        } catch (e) {
+                            // try next
+                        }
+                    }
+                    return null;
+                }
 
-                let any = false;
-                ids.forEach(id => {
-                    const r = map.get(String(id));
-                    if (!r) return;
-                    any = true;
-                    renderCardFor(r, id);
-                });
+                try {
+                    // First try per-id fetches in parallel
+                    const settled = await Promise.allSettled(ids.map(id => fetchRecipeById(id)));
+                    const perId = settled.map((s, i) => ({ id: ids[i], recipe: s.status === 'fulfilled' ? s.value : null }));
+                    const found = perId.filter(p => p.recipe);
 
-                if (!any) { root.style.display = 'none'; empty.style.display = 'block'; }
-            } catch (err) {
-                console.error('Failed to load recipes from API', err);
-                root.innerHTML = '<p style="color:#b00">Failed to load saved recipes. Check console.</p>';
-            }
+                    if (found.length) {
+                        // render those we found
+                        found.forEach(({ id, recipe: r }) => renderCardFor(r, id));
+                        return;
+                    }
 
-            // Helper to render card and wire remove
-            function renderCardFor(r, storedId) {
-                const card = document.createElement('article'); card.className = 'recipe-card';
-                const img = document.createElement('img'); img.src = r.imageUrl || r.image || '../img/default.png'; img.alt = r.title || 'Recipe Image';
-                const body = document.createElement('div'); body.className = 'body';
-                const title = document.createElement('h3'); title.textContent = r.title || `Recipe ${r._id || storedId}`;
-                const meta = document.createElement('div'); meta.className = 'meta';
-                meta.textContent = `${r.cookingTime || r.quickInfo?.totalTime || '-'} • ${r.difficulty || r.quickInfo?.difficulty || '-'} • ⭐ ${r.rating || '-'}`;
-                const footer = document.createElement('div'); footer.className = 'card-footer';
-                const openBtn = document.createElement('a'); openBtn.className='btn'; openBtn.href = `newpage.html?id=${r._id || r.id || storedId}`; openBtn.textContent = 'Open';
-                const removeBtn = document.createElement('button'); removeBtn.className='btn'; removeBtn.textContent='Remove';
-                removeBtn.addEventListener('click', ()=>{
-                    const current = (JSON.parse(localStorage.getItem(KEY)) || []).map(String);
-                    const idx = current.indexOf(String(storedId)); if (idx>=0) { current.splice(idx,1); localStorage.setItem(KEY, JSON.stringify(current)); }
-                    card.remove();
-                    if ((JSON.parse(localStorage.getItem(KEY)) || []).length === 0) { empty.style.display='block'; root.style.display='none'; }
-                });
+                    // Fallback: try to fetch the entire list and match IDs client-side
+                    const all = await fetchAllRecipes();
+                    if (!all || !all.length) {
+                        root.style.display = 'none'; empty.style.display = 'block';
+                        return;
+                    }
 
-                body.appendChild(title); body.appendChild(meta);
-                footer.appendChild(openBtn); footer.appendChild(removeBtn);
-                card.appendChild(img); card.appendChild(body); card.appendChild(footer);
-                root.appendChild(card);
-            }
-        })();
+                    const map = new Map();
+                    all.forEach(d => map.set(String(d._id || d.id), d));
+
+                    let any = false;
+                    ids.forEach(id => {
+                        const r = map.get(String(id));
+                        if (!r) return;
+                        any = true;
+                        renderCardFor(r, id);
+                    });
+
+                    if (!any) { root.style.display = 'none'; empty.style.display = 'block'; }
+                } catch (err) {
+                    console.error('Failed to load recipes from API', err);
+                    root.innerHTML = '<p style="color:#b00">Failed to load saved recipes. Check console.</p>';
+                }
+
+                // Helper to render card and wire remove
+                function renderCardFor(r, storedId) {
+                    const card = document.createElement('article'); card.className = 'recipe-card';
+                    const img = document.createElement('img'); img.src = r.imageUrl || r.image || '../img/default.png'; img.alt = r.title || 'Recipe Image';
+                    const body = document.createElement('div'); body.className = 'body';
+                    const title = document.createElement('h3'); title.textContent = r.title || `Recipe ${r._id || storedId}`;
+                    const meta = document.createElement('div'); meta.className = 'meta';
+                    meta.textContent = `${r.cookingTime || r.quickInfo?.totalTime || '-'} • ${r.difficulty || r.quickInfo?.difficulty || '-'} • ⭐ ${r.rating || '-'}`;
+                    const footer = document.createElement('div'); footer.className = 'card-footer';
+                    const openBtn = document.createElement('a'); openBtn.className='btn'; openBtn.href = `newpage.html?id=${r._id || r.id || storedId}`; openBtn.textContent = 'Open';
+                    const removeBtn = document.createElement('button'); removeBtn.className='btn'; removeBtn.textContent='Remove';
+                    removeBtn.addEventListener('click', ()=>{
+                        const current = (JSON.parse(localStorage.getItem(KEY)) || []).map(String);
+                        const idx = current.indexOf(String(storedId)); if (idx>=0) { current.splice(idx,1); localStorage.setItem(KEY, JSON.stringify(current)); }
+                        card.remove();
+                        if ((JSON.parse(localStorage.getItem(KEY)) || []).length === 0) { empty.style.display='block'; root.style.display='none'; }
+                    });
+
+                    body.appendChild(title); body.appendChild(meta);
+                    footer.appendChild(openBtn); footer.appendChild(removeBtn);
+                    card.appendChild(img); card.appendChild(body); card.appendChild(footer);
+                    root.appendChild(card);
+                }
+            })();
     </script>
 
 </body>

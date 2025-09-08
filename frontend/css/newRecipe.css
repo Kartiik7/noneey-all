@@ -37,6 +37,7 @@ header h1 {
     letter-spacing: 2px;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -166,6 +167,15 @@ body {
 
 #inner1 {
     margin-bottom: 17px;
+}
+
+#addToBookBtn{
+    width: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5px; */
 }
 
 .yt-vid {

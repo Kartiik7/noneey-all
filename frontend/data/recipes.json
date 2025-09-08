@@ -448,136 +448,136 @@
             "link": "newpage.html?id=19"
         }
     },
-    {
-        "id": 12,
-        "title": "Baingan Bharta – Smoky Roasted Eggplant Curry",
-        "description": "A North Indian classic made by roasting eggplants until smoky, then mashing and cooking them with onions, tomatoes, and spices. Best enjoyed with roti or paratha.",
-        "image": "/frontend/img/32.png",
-        "quote": "Smoky, spiced, and comforting – the true taste of North Indian kitchens!",
-        "quickInfo": {
-            "prepTime": "15 min",
-            "cookTime": "30 min",
-            "totalTime": "45 min",
-            "servings": "4",
-            "difficulty": "Medium"
-        },
-        "introduction": [
-            "Baingan Bharta is a traditional North Indian dish where large eggplants (baingan) are roasted over an open flame or in the oven until charred and smoky.",
-            "The pulp is then mashed and cooked with onions, tomatoes, and spices, resulting in a rustic, earthy curry."
-        ],
-        "history": [
-            "Baingan Bharta has its roots in Punjab but is popular across North India.",
-            "The smoky flavor comes from the traditional practice of roasting eggplants directly over charcoal or firewood.",
-            "It reflects the rural, homely style of cooking that highlights simple vegetables with robust flavors."
-        ],
-        "inner1": [
-            "Smoky roasted eggplant base.",
-            "Rich onion-tomato masala.",
-            "Rustic, homely flavors.",
-            "Perfect with roti or paratha.",
-            "Healthy and low in calories."
-        ],
-        "ytlink": [
-            "https://www.youtube.com/embed/-84Zz2EP4h4?si=fHuptFp34QNhumsb"
-        ],
-        "ingredients": [
-            {
-                "category": "Main Ingredients",
-                "items": [
-                    "2 large eggplants (baingan)",
-                    "2 medium onions, finely chopped",
-                    "2 medium tomatoes, finely chopped",
-                    "2 green chilies, chopped",
-                    "1 tbsp ginger-garlic paste",
-                    "2 tbsp oil",
-                    "Fresh coriander leaves, chopped"
-                ]
+        {
+            "id": 12,
+            "title": "Baingan Bharta – Smoky Roasted Eggplant Curry",
+            "description": "A North Indian classic made by roasting eggplants until smoky, then mashing and cooking them with onions, tomatoes, and spices. Best enjoyed with roti or paratha.",
+            "image": "/frontend/img/32.png",
+            "quote": "Smoky, spiced, and comforting – the true taste of North Indian kitchens!",
+            "quickInfo": {
+                "prepTime": "15 min",
+                "cookTime": "30 min",
+                "totalTime": "45 min",
+                "servings": "4",
+                "difficulty": "Medium"
             },
-            {
-                "category": "Spices",
-                "items": [
-                    "1/2 tsp cumin seeds",
-                    "1/4 tsp turmeric powder",
-                    "1 tsp red chili powder",
-                    "1 tsp coriander powder",
-                    "1/2 tsp garam masala",
-                    "Salt to taste"
-                ]
+            "introduction": [
+                "Baingan Bharta is a traditional North Indian dish where large eggplants (baingan) are roasted over an open flame or in the oven until charred and smoky.",
+                "The pulp is then mashed and cooked with onions, tomatoes, and spices, resulting in a rustic, earthy curry."
+            ],
+            "history": [
+                "Baingan Bharta has its roots in Punjab but is popular across North India.",
+                "The smoky flavor comes from the traditional practice of roasting eggplants directly over charcoal or firewood.",
+                "It reflects the rural, homely style of cooking that highlights simple vegetables with robust flavors."
+            ],
+            "inner1": [
+                "Smoky roasted eggplant base.",
+                "Rich onion-tomato masala.",
+                "Rustic, homely flavors.",
+                "Perfect with roti or paratha.",
+                "Healthy and low in calories."
+            ],
+            "ytlink": [
+                "https://www.youtube.com/embed/-84Zz2EP4h4?si=fHuptFp34QNhumsb"
+            ],
+            "ingredients": [
+                {
+                    "category": "Main Ingredients",
+                    "items": [
+                        "2 large eggplants (baingan)",
+                        "2 medium onions, finely chopped",
+                        "2 medium tomatoes, finely chopped",
+                        "2 green chilies, chopped",
+                        "1 tbsp ginger-garlic paste",
+                        "2 tbsp oil",
+                        "Fresh coriander leaves, chopped"
+                    ]
+                },
+                {
+                    "category": "Spices",
+                    "items": [
+                        "1/2 tsp cumin seeds",
+                        "1/4 tsp turmeric powder",
+                        "1 tsp red chili powder",
+                        "1 tsp coriander powder",
+                        "1/2 tsp garam masala",
+                        "Salt to taste"
+                    ]
+                }
+            ],
+            "instructions": [
+                {
+                    "steps": "Step 1 – Roast Eggplants",
+                    "items": [
+                        "Wash and dry eggplants, apply a little oil, and roast them directly over open flame or in oven until skin is charred.",
+                        "Cool slightly, peel off skin, and mash the pulp."
+                    ]
+                },
+                {
+                    "steps": "Step 2 – Prepare Masala",
+                    "items": [
+                        "Heat oil in a pan, add cumin seeds.",
+                        "Add onions, green chilies, and sauté until golden.",
+                        "Add ginger-garlic paste and cook until raw smell goes.",
+                        "Add tomatoes and cook until soft and mushy."
+                    ]
+                },
+                {
+                    "steps": "Step 3 – Cook Bharta",
+                    "items": [
+                        "Add turmeric, chili powder, coriander powder, and salt.",
+                        "Mix in mashed eggplant pulp and cook for 7–8 minutes.",
+                        "Sprinkle garam masala and mix well."
+                    ]
+                },
+                {
+                    "steps": "Step 4 – Serve",
+                    "items": [
+                        "Garnish with coriander leaves.",
+                        "Serve hot with roti, paratha, or steamed rice."
+                    ]
+                }
+            ],
+            "chefsTips": [
+                "For maximum smoky flavor, roast eggplants directly over gas flame.",
+                "Add a little mustard oil at the end for authentic taste.",
+                "If eggplants are too watery, cook uncovered to evaporate excess moisture."
+            ],
+            "servingSuggestions": [
+                "Serve with hot roti, paratha, or bajra roti.",
+                "Pair with curd or salad for a balanced meal."
+            ],
+            "storageAndHeating": [
+                "Store in fridge for up to 2 days in airtight container.",
+                "Reheat on stovetop; add a splash of water if too dry."
+            ],
+            "nutritionalInfo": {
+                "Calories": "120 kcal",
+                "Protein": "3g",
+                "Carbs": "18g",
+                "Fat": "5g",
+                "Fiber": "6g",
+                "Note": "(Approximate values; may vary with portion size.)"
+            },
+            "faqs": [
+                {
+                    "question": "Can I roast eggplants in the oven?",
+                    "answer": "Yes, roast at 200°C until skin is charred, then peel and mash."
+                },
+                {
+                    "question": "How to avoid bitterness in eggplants?",
+                    "answer": "Choose firm, shiny eggplants without too many seeds for best taste."
+                },
+                {
+                    "question": "Is Baingan Bharta healthy?",
+                    "answer": "Yes, it’s low in calories, high in fiber, and nutrient-rich."
+                }
+            ],
+            "closingMessage": "Baingan Bharta brings smoky comfort to your plate – a rustic, homely dish that never fails to satisfy!",
+            "nextSuggestion": {
+                "label": "Continue with",
+                "title": "Rajma Masala",
+                "link": "newpage.html?id=4"
             }
-        ],
-        "instructions": [
-            {
-                "steps": "Step 1 – Roast Eggplants",
-                "items": [
-                    "Wash and dry eggplants, apply a little oil, and roast them directly over open flame or in oven until skin is charred.",
-                    "Cool slightly, peel off skin, and mash the pulp."
-                ]
-            },
-            {
-                "steps": "Step 2 – Prepare Masala",
-                "items": [
-                    "Heat oil in a pan, add cumin seeds.",
-                    "Add onions, green chilies, and sauté until golden.",
-                    "Add ginger-garlic paste and cook until raw smell goes.",
-                    "Add tomatoes and cook until soft and mushy."
-                ]
-            },
-            {
-                "steps": "Step 3 – Cook Bharta",
-                "items": [
-                    "Add turmeric, chili powder, coriander powder, and salt.",
-                    "Mix in mashed eggplant pulp and cook for 7–8 minutes.",
-                    "Sprinkle garam masala and mix well."
-                ]
-            },
-            {
-                "steps": "Step 4 – Serve",
-                "items": [
-                    "Garnish with coriander leaves.",
-                    "Serve hot with roti, paratha, or steamed rice."
-                ]
-            }
-        ],
-        "chefsTips": [
-            "For maximum smoky flavor, roast eggplants directly over gas flame.",
-            "Add a little mustard oil at the end for authentic taste.",
-            "If eggplants are too watery, cook uncovered to evaporate excess moisture."
-        ],
-        "servingSuggestions": [
-            "Serve with hot roti, paratha, or bajra roti.",
-            "Pair with curd or salad for a balanced meal."
-        ],
-        "storageAndHeating": [
-            "Store in fridge for up to 2 days in airtight container.",
-            "Reheat on stovetop; add a splash of water if too dry."
-        ],
-        "nutritionalInfo": {
-            "Calories": "120 kcal",
-            "Protein": "3g",
-            "Carbs": "18g",
-            "Fat": "5g",
-            "Fiber": "6g",
-            "Note": "(Approximate values; may vary with portion size.)"
-        },
-        "faqs": [
-            {
-                "question": "Can I roast eggplants in the oven?",
-                "answer": "Yes, roast at 200°C until skin is charred, then peel and mash."
-            },
-            {
-                "question": "How to avoid bitterness in eggplants?",
-                "answer": "Choose firm, shiny eggplants without too many seeds for best taste."
-            },
-            {
-                "question": "Is Baingan Bharta healthy?",
-                "answer": "Yes, it’s low in calories, high in fiber, and nutrient-rich."
-            }
-        ],
-        "closingMessage": "Baingan Bharta brings smoky comfort to your plate – a rustic, homely dish that never fails to satisfy!",
-        "nextSuggestion": {
-            "label": "Continue with",
-            "title": "Rajma Masala",
-            "link": "newpage.html?id=4"
         }
-    }
 ]
