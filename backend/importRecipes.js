@@ -1,5 +1,6 @@
 // importRecipes.js
-require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config({ path: require('path').join(__dirname, '.env') });
 const mongoose = require('mongoose');
 const Recipe = require('./model/recipeModel');
 const fs = require('fs');
@@ -11,6 +12,12 @@ const dataPath = path.join(__dirname, '..', 'frontend', 'data', fileArg);
 
 if (!fs.existsSync(dataPath)) {
     console.error('File not found:', dataPath);
+    process.exit(1);
+}
+
+// Fail fast if MONGO_URI is missing
+if (!process.env.MONGO_URI) {
+    console.error('MONGO_URI is not set. Make sure backend/.env exists and contains MONGO_URI, or set the env var before running.');
     process.exit(1);
 }
 

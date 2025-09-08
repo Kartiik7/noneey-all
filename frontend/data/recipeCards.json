@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Shahi Veg Biryani",
-    "image": "/frontend/img/11.png",
+    "image": "../img/11.png",
     "cookingTime": "50 min",
     "difficulty": "Medium",
     "budget": "400-500 INR",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Paneer Biryani",
-    "image": "/frontend/img/21.png",
+    "image": "../img/21.png",
     "cookingTime": "45 min",
     "difficulty": "Medium",
     "budget": "350-450 INR",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Chole Masala",
-    "image": "/frontend/img/31.png",
+    "image": "../img/31.png",
     "cookingTime": "20 min",
     "difficulty": "Easy",
     "budget": "50-70 INR",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Poha Maharashtrian Style",
-    "image": "/frontend/img/41.png",
+    "image": "../img/41.png",
     "cookingTime": "25 min",
     "difficulty": "Easy",
     "budget": "60-80 INR",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Kerala Avial",
-    "image": "/frontend/img/51.png",
+    "image": "../img/51.png",
     "cookingTime": "40 min",
     "difficulty": "Medium",
     "budget": "150-200 INR",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Shorshe Ilish",
-    "image": "/frontend/img/61.png",
+    "image": "../img/61.png",
     "cookingTime": "35 min",
     "difficulty": "Medium",
     "budget": "500-600 INR",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "Dal Baati Churma",
-    "image": "/frontend/img/71.png",
+    "image": "../img/71.png",
     "cookingTime": "80 min",
     "difficulty": "Medium",
     "budget": "300-400 INR",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "Gatte ki Sabzi",
-    "image": "/frontend/img/81.png",
+    "image": "../img/81.png",
     "cookingTime": "55 min",
     "difficulty": "Medium",
     "budget": "250-350 INR",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Tomato Rasam",
-    "image": "/frontend/img/91.png",
+    "image": "../img/91.png",
     "cookingTime": "35 min",
     "difficulty": "Easy",
     "budget": "100-150 INR",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "title": "Undhiyu",
-    "image": "/frontend/img/101.png",
+    "image": "../img/101.png",
     "cookingTime": "1 hr 10 min",
     "difficulty": "Hard",
     "budget": "400-500 INR",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "title": "Vada Pav",
-    "image": "/frontend/img/181.png",
+    "image": "../img/181.png",
     "cookingTime": "40 min",
     "difficulty": "Medium",
     "budget": "150-200 INR",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "title": "Baingan Bharta",
-    "image": "/frontend/img/31.png",
+    "image": "../img/31.png",
     "cookingTime": "45 min",
     "difficulty": "Medium",
     "budget": "150-200 INR",

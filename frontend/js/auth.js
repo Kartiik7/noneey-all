@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // store access token for Authorization header usage
                 if (data.accessToken) localStorage.setItem('token', data.accessToken);
                 // redirect to home or suggestion page
-                window.location.href = '/frontend/views/index.html';
+                window.location.href = '..//views/index.html';
             } catch (err) {
                 alert(err.message || 'Network error');
             }
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
                 alert('Signup successful — please log in');
-                window.location.href = '/frontend/views/login.html';
+                window.location.href = '..//views/login.html';
             } catch (err) {
                 alert(err.message || 'Network error');
             }

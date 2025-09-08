@@ -1,9 +1,10 @@
 
 const { MongoClient } = require("mongodb");
 const fs = require("fs");
+const path = require("path");
 
 // Connection string (replace with your MongoDB Atlas or local URI)
-const uri = "mongodb+srv://k95241906:15Pv5UU23LdJcfT0@firstcluster.gdeuvhg.mongodb.net/"; // local MongoDB
+const uri = "mongodb+srv://k95241906:DygJtrXT$G3znr9@firstcluster.gdeuvhg.mongodb.net/"; // local MongoDB
 const client = new MongoClient(uri);
 
 async function run() {
@@ -12,10 +13,11 @@ async function run() {
 
         // choose database and collection
         const database = client.db("recipeDB");
-        const collection = database.collection("recipes");
+        const collection = database.collection("recipeCards");
 
-        // read JSON file
-        const data = JSON.parse(fs.readFileSync("../frontend/data/recipeCards.json", "utf-8"));
+    // read JSON file (resolve path relative to this script file)
+    const jsonPath = path.join(__dirname, "..", "frontend", "data", "recipeCards.json");
+    const data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
         // insert into collection
         if (Array.isArray(data)) {
