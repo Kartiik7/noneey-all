@@ -50,6 +50,7 @@ const allowedOrigins = [
     'https://noneey-all-1.onrender.com',
     'http://127.0.0.1:5000',
     // add other dev origins as needed
+    'https://reckartik90.netlify.app'
 ];
 
 app.use(cors({
@@ -58,9 +59,17 @@ app.use(cors({
         if (!origin) return callback(null, true);
         if (allowedOrigins.indexOf(origin) !== -1) {
             return callback(null, true);
-        } else {
-            return callback(new Error('CORS: Origin not allowed'), false);
         }
+        // allow any Netlify subdomain (deploy previews / custom Netlify sites)
+        try {
+            const hostname = new URL(origin).hostname;
+            if (hostname && hostname.endsWith('.netlify.app')) {
+                return callback(null, true);
+            }
+        } catch (e) {
+            // ignore URL parse errors
+        }
+        return callback(new Error('CORS: Origin not allowed'), false);
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
