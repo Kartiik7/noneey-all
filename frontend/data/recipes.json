@@ -453,7 +453,7 @@
         "nextSuggestion": {
             "label": "Continue with",
             "title": "",
-            "link": "..//views/newpage.html?id=4"
+            "link": "../views/newpage.html?id=4"
         }
     },
     {
@@ -579,7 +579,7 @@
         "nextSuggestion": {
             "label": "Continue with",
             "title": "",
-            "link": "..//views/newpage.html?id=5"
+            "link": "../views/newpage.html?id=5"
         }
     },
     {
