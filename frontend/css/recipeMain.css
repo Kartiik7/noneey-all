@@ -83,10 +83,24 @@ body {
     padding-bottom: 3px;
 }
 
+@media (max-width: 910px) {
+    .newpagetext {
+        font-size: 0.7rem;
+        /* margin-bottom: 10px; */
+        /* height: 0.7rem; */
+    }
+}
+
 
 @media (max-width: 668px) {
     .recipe1 img{
         height: auto;
         /* ma */
     }
+
+    .newpagetext{
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }
+
