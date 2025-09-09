@@ -44,7 +44,7 @@ function renderNutritionalInfo(info) {
     const section = document.getElementById("nutritional-info");
     section.innerHTML = "<h3>Nutritional Info (per Serving)</h3>";
     const ul = document.createElement("ul");
-    Object.keys(info).forEach(key => {
+    Object.keys(info || {}).forEach(key => {
         if (key !== "Note") {
             const li = document.createElement("li");
             li.textContent = `${key}: ${info[key]}`;
@@ -52,9 +52,11 @@ function renderNutritionalInfo(info) {
         }
     });
 
-    const note = document.createElement("i");
-    note.textContent = info.Note;
-    ul.appendChild(note);
+    if (info && info.Note) {
+        const noteLi = document.createElement('li');
+        noteLi.innerHTML = `<i>${info.Note}</i>`;
+        ul.appendChild(noteLi);
+    }
 
     section.appendChild(ul);
 }
@@ -83,19 +85,42 @@ function renderClosingBox(message) {
 
 function renderNextSuggestion(next) {
     const nextDiv = document.querySelector(".next-suggestion");
-    const nextTitle = document.getElementById("next-title");
-    nextTitle = next.title;
-    nextDiv.innerHTML = `
-    <span>Continue with <i class="fa-solid fa-arrow-right"></i></span>
-    <span>${nextTitle}<a href="${next.link}"><i class="fa-solid fa-arrow-right-long"></i></a></span>
-  `;
+    const title = (next && next.title) ? next.title : '';
+    const link = (next && next.link) ? next.link : '#';
+    nextDiv.innerHTML = `\n    <span>Continue with <i class="fa-solid fa-arrow-right"></i></span>\n    <span><h3 id="next-title">${title}</h3><a href="${link}"><i class="fa-solid fa-arrow-right-long"></i></a></span>\n  `;
 }
 
-// Example usage after fetching recipe JSON
-renderChefsTips(recipe.chefsTips);
-renderServingSuggestions(recipe.servingSuggestions);
-renderStorage(recipe.storageAndHeating);
-renderNutritionalInfo(recipe.nutritionalInfo);
-renderFaqs(recipe.faqs);
-renderClosingBox(recipe.closingMessage);
-renderNextSuggestion(recipe.nextSuggestion);
+// Initialize: try loading local data first; avoid assuming a global `recipe`.
+(async function init() {
+    try {
+        const res = await fetch('/data/recipes.json');
+        if (!res.ok) throw new Error('Local data not available');
+        const data = await res.json();
+        // if file contains array, pick first recipe for this page
+        const recipe = Array.isArray(data) ? data[0] : data;
+        if (!recipe) throw new Error('No recipe data found in /data/recipes.json');
+
+        renderChefsTips(recipe.chefsTips || []);
+        renderServingSuggestions(recipe.servingSuggestions || []);
+        renderStorage(recipe.storageAndHeating || []);
+        renderNutritionalInfo(recipe.nutritionalInfo || {});
+        renderFaqs(recipe.faqs || []);
+        renderClosingBox(recipe.closingMessage || '');
+        renderNextSuggestion(recipe.nextSuggestion || {});
+    } catch (err) {
+        console.error('Error loading recipe data locally:', err);
+        // expose renderers to window so other scripts (or manual initialization) can call them
+        window.renderChefsTips = renderChefsTips;
+        window.renderServingSuggestions = renderServingSuggestions;
+        window.renderStorage = renderStorage;
+        window.renderNutritionalInfo = renderNutritionalInfo;
+        window.renderFaqs = renderFaqs;
+        window.renderClosingBox = renderClosingBox;
+        window.renderNextSuggestion = renderNextSuggestion;
+    }
+})();
+
+// Examples / notes:
+// If you must fetch from a remote API, ensure CORS is enabled on that server or use a server-side proxy.
+// Example local fetch: fetch('/data/recipes.json').then(res => res.json()).then(data => ...)
+// When building image src, use '/img/' prefix: imgElement.src = '/img/' + fileName;

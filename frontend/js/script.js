@@ -182,3 +182,7 @@
 })();
 
 // Add-to-book behavior moved to ../js/addToBook.js for modularity
+
+// When referencing JSON or images, use root-relative paths so they work on Netlify:
+// fetch('/data/recipes.json')
+// document.getElementById('img').src = '/img/101.png'
