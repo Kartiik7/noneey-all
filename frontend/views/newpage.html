@@ -13,15 +13,15 @@
 <body>
     <header>
         <h1 class="site-title">
-            <a href="/">Smooocha Recp</a>
+            <a href="/views/index.html">Smooocha Recp</a>
         </h1>
         <nav class="navbar-links">
-            <a class="btn navbar-link" href="suggest.html">Suggest a recipe</a>
-            <a style="background-color: rgb(226, 201, 162);" class="btn navbar-link" href="index.html">Home</a>
-            <a style="background-color: rgb(226, 201, 162);" class="btn navbar-link" href="recipe.html">Recipes</a>
-            <!-- <a class="navbar-link" href="login.html">Log In</a>
-            <a class="btn navbar-link" href="signup.html">Sign Up</a> -->
-            <a style="background-color: rgba(108, 107, 109, 0.633);" class="btn navbar-link" href="myBook.html">My Book</a>
+            <a class="btn navbar-link" href="/views/suggest.html">Suggest a recipe</a>
+            <a style="background-color: rgb(226, 201, 162);" class="btn navbar-link" href="/views/index.html">Home</a>
+            <a style="background-color: rgb(226, 201, 162);" class="btn navbar-link" href="/views/recipe.html">Recipes</a>
+            <!-- <a class="navbar-link" href="/views/login.html">Log In</a>
+            <a class="btn navbar-link" href="/views/signUp.html">Sign Up</a> -->
+            <a style="background-color: rgba(108, 107, 109, 0.633);" class="btn navbar-link" href="/views/myBook.html">My Book</a>
         </nav>
     </header>
     <div class="main-container2">
@@ -35,7 +35,7 @@
             <span><i>"A royal vegetarian biryani that’s rich, fragrant, and fit for kings — in your kitchen
                     today!"</i></span>
             <ul id="bcbtn">
-                <li style="padding-left: 15px;" id="addToBookBtn" class="btn">Add to My Book<a title="Add to My Book"><img style="margin: 0px;" id="add-to-book" src="../img/recipebook.svg" alt=""></a>
+                <li style="padding-left: 15px;" id="addToBookBtn" class="btn">Add to My Book<a title="Add to My Book"><img style="margin: 0px;" id="add-to-book" src="/img/recipebook.svg" alt=""></a>
                 </li>
                 <li id="goToBoxBtn"><a>Scroll to video <i class="fa-solid fa-down-long"></i></a></li>
             </ul>
@@ -141,8 +141,8 @@
         </div>
     </div>
 
-    <script src="../js/addToBook.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="/js/addToBook.js"></script>
+    <script src="/js/script.js"></script>
     <script>
         document.getElementById("goToBoxBtn").addEventListener("click", () => {
             const target = document.getElementById("myBox");
