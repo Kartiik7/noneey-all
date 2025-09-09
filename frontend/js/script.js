@@ -1,3 +1,9 @@
+
+function sliceWords(text, maxWords = 20, ellipsis = '...') {
+    if (!text) return '';
+    const words = text.trim().split(/\s+/);
+    return words.length <= maxWords ? text.trim() : words.slice(0, maxWords).join(' ') + ellipsis;
+}
 (function () {
     const bySel = (s, root = document) => root.querySelector(s);
     const byAll = (s, root = document) => Array.from(root.querySelectorAll(s));
@@ -74,8 +80,9 @@
         );
 
         // History
+        const short = sliceWords(recipe.title, 3);
         setHTML(".history-box",
-            `<h2>Origin of Shahi Biryani</h2>${buildList(recipe.history)}`
+            `<h2>Origin of ${short}</h2>${buildList(recipe.history)}`
         );
 
         // Why you'll love
